@@ -5,6 +5,8 @@
 const int max_possible_size = 100;
 
 char* reduce_size(char* line, int size){
+    assert(line != NULL);
+    
     char* copy_line = line;
     char* new_line = (char*)calloc(size + 1, sizeof(char));
     char* copy_new_line = new_line;
@@ -19,6 +21,7 @@ char* reduce_size(char* line, int size){
     free(line);
     return(new_line);
 }
+
 
 int lines_count(char* file){
     assert(file != NULL);
@@ -35,9 +38,12 @@ int lines_count(char* file){
     fclose(fp);
     return count;
 }
+
+
 int get_line(char* line, FILE* fp){
     assert(line != NULL);
     assert(fp != NULL);
+    
     char c = 0;
     int curr = 0;
     
@@ -51,9 +57,11 @@ int get_line(char* line, FILE* fp){
     return curr - 1;
 }
 
+
 int read_data(char** data, char* file){
     assert(data != NULL);
     assert(file != NULL);
+    
     int n = 1;
     int count = lines_count(file);
     //int count = 1;
@@ -75,15 +83,20 @@ int read_data(char** data, char* file){
     return count;
 }
 
+
 void print_data(char** data, int count){
     assert(data != NULL);
+    
     for(int i = 0; i < count; i++){
         printf("%s\n", data[i]);
     }
 }
 
-void save_line(char* line, FILE* fp){
 
+void save_line(char* line, FILE* fp){
+    assert(line != NULL);
+    assert(fp != NULL);
+    
     while(*line != 0){
         putc(*line, fp);
         line++;
@@ -92,6 +105,9 @@ void save_line(char* line, FILE* fp){
 }
 
 void save_data(char** data, int count, char* file){
+    assert(data != NULL);
+    assert(file != NULL);
+
     FILE* fp = fopen(file, "w");
     for(int i =0; i < count; i++){
         save_line(data[i], fp);
