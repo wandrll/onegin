@@ -1,0 +1,5 @@
+<map id="lines_count" name="lines_count">
+<area shape="rect" id="node1" title="находит количество переходов на новую строку" alt="" coords="243,5,339,32"/>
+<area shape="rect" id="node2" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Вызов разных функций" alt="" coords="5,5,60,32"/>
+<area shape="rect" id="node3" href="$data_8c.html#a797f219eace9914c348dea08ec5887b2" title="считывает все строки из файла" alt="" coords="108,31,195,57"/>
+</map>
