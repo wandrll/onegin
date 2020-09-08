@@ -74,7 +74,7 @@ int read_data(char** data, char* file){
             free(data[i]);
             count--;
         }else{
-            data[i] = reduce_size(data[i], n);
+            //data[i] = reduce_size(data[i], n);
             i++;
         }
     }

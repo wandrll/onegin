@@ -23,6 +23,9 @@ int main(int argc, char** argv){
     int lines_count = read_data(data, argv[1]);
     bubble_sort(data, 0, lines_count-1, string_compare, sizeof(data[0]));
     save_data(data,lines_count, argv[2]);
+    for(int i = 0; i < lines_count; i++){
+        free(data[i]);
+    }
     free(data);
 
     return 0;

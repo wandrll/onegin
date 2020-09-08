@@ -37,26 +37,34 @@ int string_compare(void* line1, void* line2){
     s1 = clean_string(s1);
     char* s2 = *(char**)line2;
     s2 = clean_string(s2);
-    
+    char* copys1 = s1;
+    char* copys2 = s2;
     while((*s1 != 0) && (*s2 != 0)){
         if(*s1 == *s2){
             s1++;
             s2++;
         }else{
             if(*s1 < *s2){
+                free(copys1);
+                free(copys2);
                 return 1;
             }else{
+                free(copys1);
+                free(copys2);
                 return -11;
             }
         }
     }
     if(*s1 == 0){
+        free(copys1);
+        free(copys2);
         return 1;
     }else{
+        free(copys1);
+        free(copys2);
         return -10;
     }
-    free(s1);
-    free(s2);
+    
     
 }
 
