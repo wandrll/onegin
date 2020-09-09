@@ -33,14 +33,13 @@ int string_compare(void* line1, void* line2){
     assert(line1 != NULL);
     assert(line2 != NULL);
     assert(line1 != line2);
-    char* l1 = *(char**)line1;
-    char* l2 = *(char**)line2;
-    while((*l1 == *l2) && (*l1 != 0)){
-        l1++;
-        l2++;
+
+    while((*(char*)line1 == *(char*)line2) && (*(char*)line1 != 0)){
+        (char*)line1++;
+        (char*)line2++;
     }
-    return *l1 - *l2;
-    
+
+    return *(char*)line1 - *(char*)line2;    
 }
 
 typedef int (*comp_type)(void*, void*);
@@ -48,12 +47,15 @@ typedef int (*comp_type)(void*, void*);
 void bubble_sort(void* data, int start, int end, comp_type comp, size_t size){
     assert(data != NULL);
     assert(size != 0);
-    
+    void* ptr1 = 0;
+    void* ptr2 = 0;
     for(int i = start; i <= end; i++){
         for(int j = 0; j <= end - i - 1; j++){
 
-            if( comp( (char*)data + j*size, (char*)data + (j+1)*size ) > 0){
-                
+            ptr1 = ((char*)data + j*size);
+            ptr2 = ((char*)data + (j+1)*size);
+
+            if( comp( *((char**)ptr1), *((char**)ptr2) ) > 0){
                 void* temp = malloc(size);
                 memcpy(temp, data + j*size, size);
                 memcpy(data + j*size, data + (j+1)*size, size);
