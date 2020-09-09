@@ -33,40 +33,13 @@ int string_compare(void* line1, void* line2){
     assert(line1 != NULL);
     assert(line2 != NULL);
     assert(line1 != line2);
-
-    char* s1 = *(char**)line1;
-    s1 = clean_string(s1);
-    char* s2 = *(char**)line2;
-    s2 = clean_string(s2);
-    char* copys1 = s1;
-    char* copys2 = s2;
-    
-    while((*s1 != 0) && (*s2 != 0)){
-        if(*s1 == *s2){
-            s1++;
-            s2++;
-        }else{
-            if(*s1 < *s2){
-                free(copys1);
-                free(copys2);
-                return 1;
-            }else{
-                free(copys1);
-                free(copys2);
-                return -11;
-            }
-        }
+    char* l1 = *(char**)line1;
+    char* l2 = *(char**)line2;
+    while((*l1 == *l2) && (*l1 != 0)){
+        l1++;
+        l2++;
     }
-    if(*s1 == 0){
-        free(copys1);
-        free(copys2);
-        return 1;
-    }else{
-        free(copys1);
-        free(copys2);
-        return -10;
-    }
-    
+    return *l1 - *l2;
     
 }
 
@@ -78,7 +51,9 @@ void bubble_sort(void* data, int start, int end, comp_type comp, size_t size){
     
     for(int i = start; i <= end; i++){
         for(int j = 0; j <= end - i - 1; j++){
-            if( comp( (char*)data + j*size, (char*)data + (j+1)*size ) < 0){
+
+            if( comp( (char*)data + j*size, (char*)data + (j+1)*size ) > 0){
+                
                 void* temp = malloc(size);
                 memcpy(temp, data + j*size, size);
                 memcpy(data + j*size, data + (j+1)*size, size);
