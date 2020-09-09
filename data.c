@@ -2,25 +2,7 @@
 #include <stdlib.h>
 #include <assert.h>
 /** \file */
-const int max_possible_size = 100;
-
-char* reduce_size(char* line, int size){
-    assert(line != NULL);
-    
-    char* copy_line = line;
-    char* new_line = (char*)calloc(size + 1, sizeof(char));
-    char* copy_new_line = new_line;
-
-    while(*copy_line != 0){
-        *copy_new_line = *copy_line;
-        copy_new_line++;
-        copy_line++;
-    }
-
-    *copy_new_line = 0;
-    free(line);
-    return(new_line);
-}
+const int max_possible_size = 300;
 
 
 int lines_count(char* file){
@@ -29,6 +11,7 @@ int lines_count(char* file){
     int count = 0;
     FILE* fp = fopen(file, "r");
 
+    assert(fp != NULL);
     while(c != EOF){
         c = getc(fp);
         if(c == '\n'){
@@ -58,27 +41,30 @@ int get_line(char* line, FILE* fp){
 }
 
 
-int read_data(char** data, char* file){
+int read_data(char** data, char* file, int count){
     assert(data != NULL);
     assert(file != NULL);
-    
+    char* buffer = (char*)calloc(max_possible_size, sizeof(char));
     int n = 1;
-    int count = lines_count(file);
-    //int count = 1;
+
     FILE* fp = fopen(file, "r");
+    assert(fp != NULL);
+
     int i = 0;
     while(i < count){
-        data[i] = (char*)calloc(max_possible_size, sizeof(char));
-        n = get_line(data[i], fp);
+        n = get_line(buffer, fp);
         if(n == 0){
-            free(data[i]);
             count--;
         }else{
-            //data[i] = reduce_size(data[i], n);
+            data[i] = (char*)calloc(n + 1, sizeof(char));
+            for(int j = 0; j < n; j++){
+                data[i][j] = buffer[j];
+            }
+            data[i][n] = 0;
             i++;
         }
     }
-    
+    free(buffer);
     fclose(fp);
     return count;
 }
@@ -109,8 +95,17 @@ void save_data(char** data, int count, char* file){
     assert(file != NULL);
 
     FILE* fp = fopen(file, "w");
+    assert(fp != NULL);
+
     for(int i =0; i < count; i++){
         save_line(data[i], fp);
     }
     fclose(fp);
+}
+
+void free_data(char** data, int lines_count){
+    for(int i = 0; i < lines_count; i++){
+        free(data[i]);
+    }
+    free(data);
 }

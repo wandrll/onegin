@@ -25,7 +25,7 @@ char* clean_string(char* line){
         }
         line++;
     }
-    *(b+curr) = 0;
+    *(b + curr) = 0;
     return b;
 }
 
@@ -33,12 +33,14 @@ int string_compare(void* line1, void* line2){
     assert(line1 != NULL);
     assert(line2 != NULL);
     assert(line1 != line2);
+
     char* s1 = *(char**)line1;
     s1 = clean_string(s1);
     char* s2 = *(char**)line2;
     s2 = clean_string(s2);
     char* copys1 = s1;
     char* copys2 = s2;
+    
     while((*s1 != 0) && (*s2 != 0)){
         if(*s1 == *s2){
             s1++;

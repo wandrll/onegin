@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['main_29',['main',['../main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main.c']]]
+  ['lines_5fcount_29',['lines_count',['../data_8h.html#a4e03cfe06968f901a5ad0ff65c97c6ee',1,'lines_count(char *file):&#160;data.c'],['../data_8c.html#a4e03cfe06968f901a5ad0ff65c97c6ee',1,'lines_count(char *file):&#160;data.c']]]
 ];
