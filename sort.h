@@ -14,7 +14,7 @@ char* clean_string(char* line);
   
     \return число > или < 0, в зависимости от результата сравнения
  */
-int string_compare(void* a, void* b);
+int string_compare(const char* a, const char* b);
 
 typedef int (*comp_type)(void*, void*);
 
@@ -28,3 +28,9 @@ typedef int (*comp_type)(void*, void*);
  */
 
 void bubble_sort(void* data, int start, int end, comp_type comp, size_t size);
+
+/** \brief - обертка для сравнения двух строк 
+  
+    \return число > или < 0, в зависимости от результата сравнения
+ */
+int sort_string_compare(void* line1, void* line2);

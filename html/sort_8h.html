@@ -104,18 +104,24 @@ Functions</h2></td></tr>
 </ul>
  <a href="sort_8h.html#aab1d54c5985c3f155449a82d2468eebb">More...</a><br /></td></tr>
 <tr class="separator:aab1d54c5985c3f155449a82d2468eebb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7b7302bf9586315983ff540ebc412cb3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sort_8h.html#a7b7302bf9586315983ff540ebc412cb3">string_compare</a> (void *a, void *b)</td></tr>
-<tr class="memdesc:a7b7302bf9586315983ff540ebc412cb3"><td class="mdescLeft">&#160;</td><td class="mdescRight"><ul>
+<tr class="memitem:affdcd0315c48bb7d719e0f764ac2459d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sort_8h.html#affdcd0315c48bb7d719e0f764ac2459d">string_compare</a> (const char *a, const char *b)</td></tr>
+<tr class="memdesc:affdcd0315c48bb7d719e0f764ac2459d"><td class="mdescLeft">&#160;</td><td class="mdescRight"><ul>
 <li>сравнение двух строк </li>
 </ul>
- <a href="sort_8h.html#a7b7302bf9586315983ff540ebc412cb3">More...</a><br /></td></tr>
-<tr class="separator:a7b7302bf9586315983ff540ebc412cb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+ <a href="sort_8h.html#affdcd0315c48bb7d719e0f764ac2459d">More...</a><br /></td></tr>
+<tr class="separator:affdcd0315c48bb7d719e0f764ac2459d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a118507087619afc23b7666b4e28d5887"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sort_8h.html#a118507087619afc23b7666b4e28d5887">bubble_sort</a> (void *data, int start, int end, <a class="el" href="sort_8c.html#a1728669ffad1ba2183ac639f89cbcdd6">comp_type</a> comp, size_t size)</td></tr>
 <tr class="memdesc:a118507087619afc23b7666b4e28d5887"><td class="mdescLeft">&#160;</td><td class="mdescRight"><ul>
 <li>старая добрая сортировка пузырьком, но уже для любых типов </li>
 </ul>
  <a href="sort_8h.html#a118507087619afc23b7666b4e28d5887">More...</a><br /></td></tr>
 <tr class="separator:a118507087619afc23b7666b4e28d5887"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8325dd1c3cb1d64c35d606d6723115e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sort_8h.html#aa8325dd1c3cb1d64c35d606d6723115e">sort_string_compare</a> (void *line1, void *line2)</td></tr>
+<tr class="memdesc:aa8325dd1c3cb1d64c35d606d6723115e"><td class="mdescLeft">&#160;</td><td class="mdescRight"><ul>
+<li>обертка для сравнения двух строк </li>
+</ul>
+ <a href="sort_8h.html#aa8325dd1c3cb1d64c35d606d6723115e">More...</a><br /></td></tr>
+<tr class="separator:aa8325dd1c3cb1d64c35d606d6723115e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Typedef Documentation</h2>
 <a id="a1728669ffad1ba2183ac639f89cbcdd6"></a>
@@ -230,21 +236,63 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>указатель на новую очищенную строку(Старая остается неизменной) </dd></dl>
+
+</div>
+</div>
+<a id="aa8325dd1c3cb1d64c35d606d6723115e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8325dd1c3cb1d64c35d606d6723115e">&#9670;&nbsp;</a></span>sort_string_compare()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int sort_string_compare </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>line1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>line2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><ul>
+<li>обертка для сравнения двух строк </li>
+</ul>
+</p>
+<dl class="section return"><dt>Returns</dt><dd>число &gt; или &lt; 0, в зависимости от результата сравнения </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="sort_8h_aa8325dd1c3cb1d64c35d606d6723115e_cgraph.png" border="0" usemap="#sort_8h_aa8325dd1c3cb1d64c35d606d6723115e_cgraph" alt=""/></div>
+<map name="sort_8h_aa8325dd1c3cb1d64c35d606d6723115e_cgraph" id="sort_8h_aa8325dd1c3cb1d64c35d606d6723115e_cgraph">
+<area shape="rect" title="обертка для сравнения двух строк" alt="" coords="5,5,160,32"/>
+<area shape="rect" href="sort_8c.html#a5e2de5241d956430cf502cca82452e2b" title="сравнение двух строк" alt="" coords="208,5,331,32"/>
+</map>
+</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="sort_8h_aab1d54c5985c3f155449a82d2468eebb_icgraph.png" border="0" usemap="#sort_8h_aab1d54c5985c3f155449a82d2468eebb_icgraph" alt=""/></div>
-<map name="sort_8h_aab1d54c5985c3f155449a82d2468eebb_icgraph" id="sort_8h_aab1d54c5985c3f155449a82d2468eebb_icgraph">
-<area shape="rect" title="очистка строки от мусора(цифры, знаки препинания и др.)" alt="" coords="279,5,380,32"/>
-<area shape="rect" href="sort_8c.html#a058d31d29bc4659120abaa9c7500cfa7" title="сравнение двух строк" alt="" coords="108,5,231,32"/>
+<div class="center"><img src="sort_8h_aa8325dd1c3cb1d64c35d606d6723115e_icgraph.png" border="0" usemap="#sort_8h_aa8325dd1c3cb1d64c35d606d6723115e_icgraph" alt=""/></div>
+<map name="sort_8h_aa8325dd1c3cb1d64c35d606d6723115e_icgraph" id="sort_8h_aa8325dd1c3cb1d64c35d606d6723115e_icgraph">
+<area shape="rect" title="обертка для сравнения двух строк" alt="" coords="108,5,263,32"/>
 <area shape="rect" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Вызов разных функций" alt="" coords="5,5,60,32"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a7b7302bf9586315983ff540ebc412cb3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7b7302bf9586315983ff540ebc412cb3">&#9670;&nbsp;</a></span>string_compare()</h2>
+<a id="affdcd0315c48bb7d719e0f764ac2459d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#affdcd0315c48bb7d719e0f764ac2459d">&#9670;&nbsp;</a></span>string_compare()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -252,13 +300,13 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">int string_compare </td>
           <td>(</td>
-          <td class="paramtype">void *&#160;</td>
+          <td class="paramtype">const char *&#160;</td>
           <td class="paramname"><em>a</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">void *&#160;</td>
+          <td class="paramtype">const char *&#160;</td>
           <td class="paramname"><em>b</em>&#160;</td>
         </tr>
         <tr>
@@ -275,20 +323,12 @@ Here is the caller graph for this function:</div>
 </p>
 <dl class="section return"><dt>Returns</dt><dd>число &gt; или &lt; 0, в зависимости от результата сравнения </dd></dl>
 <div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="sort_8h_a7b7302bf9586315983ff540ebc412cb3_cgraph.png" border="0" usemap="#sort_8h_a7b7302bf9586315983ff540ebc412cb3_cgraph" alt=""/></div>
-<map name="sort_8h_a7b7302bf9586315983ff540ebc412cb3_cgraph" id="sort_8h_a7b7302bf9586315983ff540ebc412cb3_cgraph">
-<area shape="rect" title="сравнение двух строк" alt="" coords="5,5,128,32"/>
-<area shape="rect" href="sort_8c.html#aab1d54c5985c3f155449a82d2468eebb" title="очистка строки от мусора(цифры, знаки препинания и др.)" alt="" coords="176,5,277,32"/>
-</map>
-</div>
-<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="sort_8h_a7b7302bf9586315983ff540ebc412cb3_icgraph.png" border="0" usemap="#sort_8h_a7b7302bf9586315983ff540ebc412cb3_icgraph" alt=""/></div>
-<map name="sort_8h_a7b7302bf9586315983ff540ebc412cb3_icgraph" id="sort_8h_a7b7302bf9586315983ff540ebc412cb3_icgraph">
-<area shape="rect" title="сравнение двух строк" alt="" coords="108,5,231,32"/>
+<div class="center"><img src="sort_8h_affdcd0315c48bb7d719e0f764ac2459d_icgraph.png" border="0" usemap="#sort_8h_affdcd0315c48bb7d719e0f764ac2459d_icgraph" alt=""/></div>
+<map name="sort_8h_affdcd0315c48bb7d719e0f764ac2459d_icgraph" id="sort_8h_affdcd0315c48bb7d719e0f764ac2459d_icgraph">
+<area shape="rect" title="сравнение двух строк" alt="" coords="311,5,433,32"/>
+<area shape="rect" href="sort_8c.html#aa8325dd1c3cb1d64c35d606d6723115e" title="обертка для сравнения двух строк" alt="" coords="108,5,263,32"/>
 <area shape="rect" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Вызов разных функций" alt="" coords="5,5,60,32"/>
 </map>
 </div>

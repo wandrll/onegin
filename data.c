@@ -41,12 +41,12 @@ int get_line(char* line, FILE* fp){
 }
 
 
-int read_data(char** data, char* file, int count){
+int read_data_and_create_bin(char** data, char* file, int count){
     assert(data != NULL);
     assert(file != NULL);
     char* buffer = (char*)calloc(max_possible_size, sizeof(char));
     int n = 1;
-
+    FILE* fb = fopen("temp.bin", "wb");
     FILE* fp = fopen(file, "r");
     assert(fp != NULL);
 
@@ -61,14 +61,36 @@ int read_data(char** data, char* file, int count){
                 data[i][j] = buffer[j];
             }
             data[i][n] = 0;
+            fwrite(&n, sizeof(int), 1, fb);
+            fwrite(data[i], sizeof(char), n+1, fb);
             i++;
         }
     }
     free(buffer);
     fclose(fp);
+    fclose(fb);
     return count;
 }
 
+int read_bin(char** data){
+    assert(data != NULL);
+    FILE* fb = fopen("temp.bin", "rb");
+    assert(fb != NULL);
+    int n = 0;
+    int i = 0;
+    size_t flag = 1;
+
+    while(flag != 0){
+        flag = fread(&n, sizeof(int), 1, fb);
+        if(flag != 0){
+            data[i] = (char*)calloc(n + 1, sizeof(char));
+            fread(data[i], sizeof(char), n + 1, fb);
+            i++;
+        }
+    }
+    fclose(fb);
+    return i;
+}
 
 void print_data(char** data, int count){
     assert(data != NULL);
@@ -103,9 +125,12 @@ void save_data(char** data, int count, char* file){
     fclose(fp);
 }
 
+
+
 void free_data(char** data, int lines_count){
     for(int i = 0; i < lines_count; i++){
         free(data[i]);
     }
     free(data);
 }
+

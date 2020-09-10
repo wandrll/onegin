@@ -14,13 +14,13 @@ int get_line(char* line, FILE* fp);
  */
 int lines_count(char* file);
 
-/** \brief считывает все строки из файла
+/** \brief считывает все строки из файла и сохраняет их в файл temp.bin в формате "количество символов, строка"
  *  \param data указатель на массив указателей
  *  \param file имя файла
  *  \param count количество переходов на новую строку в файле "file"
  *  \return количество не пустых строк в файле
  */
-int read_data(char** data, char* file, int count);
+int read_data_and_create_bin(char** data, char* file, int count);
 
 /** \brief печатает все строки
  *  \param data указатель на массив указателей
@@ -46,3 +46,9 @@ void save_data(char** data, int count, char* file);
  *  \param lines_count количество ненулевых строк
  */
 void free_data(char** data, int lines_count);
+
+/** \brief считывает строки из файла temp.bin 
+ *  \param data указатель на массив указателей
+ *  \return количество считанных строк
+ */
+int read_bin(char** data);

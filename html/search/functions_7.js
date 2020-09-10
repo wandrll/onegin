@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['read_5fdata_32',['read_data',['../data_8h.html#ae39d66c2a10675416e989ccaa38028c1',1,'read_data(char **data, char *file, int count):&#160;data.c'],['../data_8c.html#ae39d66c2a10675416e989ccaa38028c1',1,'read_data(char **data, char *file, int count):&#160;data.c']]]
+  ['read_5fbin_34',['read_bin',['../data_8h.html#ad4b49069d5f8b1fed989418160750943',1,'read_bin(char **data):&#160;data.c'],['../data_8c.html#ad4b49069d5f8b1fed989418160750943',1,'read_bin(char **data):&#160;data.c']]],
+  ['read_5fdata_5fand_5fcreate_5fbin_35',['read_data_and_create_bin',['../data_8h.html#acf3b4c91f1339bf83232943ff7e11907',1,'read_data_and_create_bin(char **data, char *file, int count):&#160;data.c'],['../data_8c.html#acf3b4c91f1339bf83232943ff7e11907',1,'read_data_and_create_bin(char **data, char *file, int count):&#160;data.c']]]
 ];

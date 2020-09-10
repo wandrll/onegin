@@ -99,9 +99,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a4e03cfe06968f901a5ad0ff65c97c6ee"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="data_8h.html#a4e03cfe06968f901a5ad0ff65c97c6ee">lines_count</a> (char *file)</td></tr>
 <tr class="memdesc:a4e03cfe06968f901a5ad0ff65c97c6ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">находит количество переходов на новую строку  <a href="data_8h.html#a4e03cfe06968f901a5ad0ff65c97c6ee">More...</a><br /></td></tr>
 <tr class="separator:a4e03cfe06968f901a5ad0ff65c97c6ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae39d66c2a10675416e989ccaa38028c1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="data_8h.html#ae39d66c2a10675416e989ccaa38028c1">read_data</a> (char **data, char *file, int count)</td></tr>
-<tr class="memdesc:ae39d66c2a10675416e989ccaa38028c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">считывает все строки из файла  <a href="data_8h.html#ae39d66c2a10675416e989ccaa38028c1">More...</a><br /></td></tr>
-<tr class="separator:ae39d66c2a10675416e989ccaa38028c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf3b4c91f1339bf83232943ff7e11907"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="data_8h.html#acf3b4c91f1339bf83232943ff7e11907">read_data_and_create_bin</a> (char **data, char *file, int count)</td></tr>
+<tr class="memdesc:acf3b4c91f1339bf83232943ff7e11907"><td class="mdescLeft">&#160;</td><td class="mdescRight">считывает все строки из файла и сохраняет их в файл temp.bin в формате "количество символов, строка".  <a href="data_8h.html#acf3b4c91f1339bf83232943ff7e11907">More...</a><br /></td></tr>
+<tr class="separator:acf3b4c91f1339bf83232943ff7e11907"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab5221f3f63a9833b06a64b93eec7d8fe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="data_8h.html#ab5221f3f63a9833b06a64b93eec7d8fe">print_data</a> (char **data, int count)</td></tr>
 <tr class="memdesc:ab5221f3f63a9833b06a64b93eec7d8fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">печатает все строки  <a href="data_8h.html#ab5221f3f63a9833b06a64b93eec7d8fe">More...</a><br /></td></tr>
 <tr class="separator:ab5221f3f63a9833b06a64b93eec7d8fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -114,6 +114,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a0560e51933aa4447c28d1fea6f3dbbd0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="data_8h.html#a0560e51933aa4447c28d1fea6f3dbbd0">free_data</a> (char **data, int <a class="el" href="data_8c.html#a4e03cfe06968f901a5ad0ff65c97c6ee">lines_count</a>)</td></tr>
 <tr class="memdesc:a0560e51933aa4447c28d1fea6f3dbbd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">очищает память выделенную для data.  <a href="data_8h.html#a0560e51933aa4447c28d1fea6f3dbbd0">More...</a><br /></td></tr>
 <tr class="separator:a0560e51933aa4447c28d1fea6f3dbbd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4b49069d5f8b1fed989418160750943"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="data_8h.html#ad4b49069d5f8b1fed989418160750943">read_bin</a> (char **data)</td></tr>
+<tr class="memdesc:ad4b49069d5f8b1fed989418160750943"><td class="mdescLeft">&#160;</td><td class="mdescRight">считывает строки из файла temp.bin.  <a href="data_8h.html#ad4b49069d5f8b1fed989418160750943">More...</a><br /></td></tr>
+<tr class="separator:ad4b49069d5f8b1fed989418160750943"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a0560e51933aa4447c28d1fea6f3dbbd0"></a>
@@ -211,9 +214,8 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="data_8h_a0691b67c1879047d559d6a5417151eb3_icgraph.png" border="0" usemap="#data_8h_a0691b67c1879047d559d6a5417151eb3_icgraph" alt=""/></div>
 <map name="data_8h_a0691b67c1879047d559d6a5417151eb3_icgraph" id="data_8h_a0691b67c1879047d559d6a5417151eb3_icgraph">
-<area shape="rect" title="считывает одну строку из файла" alt="" coords="243,5,317,32"/>
-<area shape="rect" href="data_8c.html#ae39d66c2a10675416e989ccaa38028c1" title="считывает все строки из файла" alt="" coords="108,5,195,32"/>
-<area shape="rect" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Вызов разных функций" alt="" coords="5,5,60,32"/>
+<area shape="rect" title="считывает одну строку из файла" alt="" coords="247,5,321,32"/>
+<area shape="rect" href="data_8c.html#acf3b4c91f1339bf83232943ff7e11907" title="считывает все строки из файла и сохраняет их в файл temp.bin в формате &quot;количество символов,..." alt="" coords="5,5,199,32"/>
 </map>
 </div>
 
@@ -293,14 +295,50 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="ae39d66c2a10675416e989ccaa38028c1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae39d66c2a10675416e989ccaa38028c1">&#9670;&nbsp;</a></span>read_data()</h2>
+<a id="ad4b49069d5f8b1fed989418160750943"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4b49069d5f8b1fed989418160750943">&#9670;&nbsp;</a></span>read_bin()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int read_data </td>
+          <td class="memname">int read_bin </td>
+          <td>(</td>
+          <td class="paramtype">char **&#160;</td>
+          <td class="paramname"><em>data</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>считывает строки из файла temp.bin. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>указатель на массив указателей </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>количество считанных строк </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="data_8h_ad4b49069d5f8b1fed989418160750943_icgraph.png" border="0" usemap="#data_8h_ad4b49069d5f8b1fed989418160750943_icgraph" alt=""/></div>
+<map name="data_8h_ad4b49069d5f8b1fed989418160750943_icgraph" id="data_8h_ad4b49069d5f8b1fed989418160750943_icgraph">
+<area shape="rect" title="считывает строки из файла temp.bin." alt="" coords="108,5,187,32"/>
+<area shape="rect" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Вызов разных функций" alt="" coords="5,5,60,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="acf3b4c91f1339bf83232943ff7e11907"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf3b4c91f1339bf83232943ff7e11907">&#9670;&nbsp;</a></span>read_data_and_create_bin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int read_data_and_create_bin </td>
           <td>(</td>
           <td class="paramtype">char **&#160;</td>
           <td class="paramname"><em>data</em>, </td>
@@ -325,7 +363,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>считывает все строки из файла </p>
+<p>считывает все строки из файла и сохраняет их в файл temp.bin в формате "количество символов, строка". </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">data</td><td>указатель на массив указателей </td></tr>
@@ -338,19 +376,10 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="data_8h_ae39d66c2a10675416e989ccaa38028c1_cgraph.png" border="0" usemap="#data_8h_ae39d66c2a10675416e989ccaa38028c1_cgraph" alt=""/></div>
-<map name="data_8h_ae39d66c2a10675416e989ccaa38028c1_cgraph" id="data_8h_ae39d66c2a10675416e989ccaa38028c1_cgraph">
-<area shape="rect" title="считывает все строки из файла" alt="" coords="5,5,92,32"/>
-<area shape="rect" href="data_8c.html#a0691b67c1879047d559d6a5417151eb3" title="считывает одну строку из файла" alt="" coords="140,5,215,32"/>
-</map>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="data_8h_ae39d66c2a10675416e989ccaa38028c1_icgraph.png" border="0" usemap="#data_8h_ae39d66c2a10675416e989ccaa38028c1_icgraph" alt=""/></div>
-<map name="data_8h_ae39d66c2a10675416e989ccaa38028c1_icgraph" id="data_8h_ae39d66c2a10675416e989ccaa38028c1_icgraph">
-<area shape="rect" title="считывает все строки из файла" alt="" coords="108,5,195,32"/>
-<area shape="rect" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Вызов разных функций" alt="" coords="5,5,60,32"/>
+<div class="center"><img src="data_8h_acf3b4c91f1339bf83232943ff7e11907_cgraph.png" border="0" usemap="#data_8h_acf3b4c91f1339bf83232943ff7e11907_cgraph" alt=""/></div>
+<map name="data_8h_acf3b4c91f1339bf83232943ff7e11907_cgraph" id="data_8h_acf3b4c91f1339bf83232943ff7e11907_cgraph">
+<area shape="rect" title="считывает все строки из файла и сохраняет их в файл temp.bin в формате &quot;количество символов,..." alt="" coords="5,5,199,32"/>
+<area shape="rect" href="data_8c.html#a0691b67c1879047d559d6a5417151eb3" title="считывает одну строку из файла" alt="" coords="247,5,321,32"/>
 </map>
 </div>
 

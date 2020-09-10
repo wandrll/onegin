@@ -1,6 +1,0 @@
-<map id="read_data" name="read_data">
-<area shape="rect" id="node1" title="считывает все строки из файла" alt="" coords="5,56,92,83"/>
-<area shape="rect" id="node2" href="$data_8c.html#a0691b67c1879047d559d6a5417151eb3" title="считывает одну строку из файла" alt="" coords="152,5,227,32"/>
-<area shape="rect" id="node3" href="$data_8c.html#a4e03cfe06968f901a5ad0ff65c97c6ee" title="находит количество переходов на новую строку" alt="" coords="141,56,237,83"/>
-<area shape="rect" id="node4" href="$data_8c.html#a3bdd14d4ac19fdb036ddb8be6ee128d9" title="уменьшает размер выделенной памяти под строку" alt="" coords="140,107,239,133"/>
-</map>

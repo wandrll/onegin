@@ -21,8 +21,9 @@ int main(int argc, char** argv){
     int num_of_lines = lines_count(argv[1]);
 
     char** data = (char**)calloc(num_of_lines, sizeof(char*));
-    int lines_count = read_data(data, argv[1], num_of_lines);
-    bubble_sort(data, 0, lines_count-1, string_compare, sizeof(data[0]));
+    //int lines_count = read_data_and_create_bin(data, argv[1], num_of_lines);
+    int lines_count = read_bin(data);
+    bubble_sort(data, 0, lines_count-1, sort_string_compare, sizeof(data[0]));
     save_data(data,lines_count, argv[2]);
 
     free_data(data, lines_count);
