@@ -20,7 +20,9 @@ int lines_count(char* file);
  *  \param count количество переходов на новую строку в файле "file"
  *  \return количество не пустых строк в файле
  */
-int read_data_and_create_bin(char** data, char* file, int count);
+int old_read_data(char** data, char* file, int count);
+
+int read_data_and_create_bin(char* file);
 
 /** \brief печатает все строки
  *  \param data указатель на массив указателей
@@ -45,10 +47,11 @@ void save_data(char** data, int count, char* file);
  *  \param data указатель на массив указателей
  *  \param lines_count количество ненулевых строк
  */
-void free_data(char** data, int lines_count);
+void free_data();
 
 /** \brief считывает строки из файла temp.bin 
  *  \param data указатель на массив указателей
  *  \return количество считанных строк
  */
 int read_bin(char** data);
+int file_size(char* file);
