@@ -5,6 +5,7 @@
 const int max_possible_size = 300;
 char* line;
 
+
 int lines_count(char* file){
     assert(file != NULL);
     char c = 0;
@@ -26,7 +27,6 @@ int lines_count(char* file){
 int get_line(char* line, FILE* fp){
     assert(line != NULL);
     assert(fp != NULL);
-    
     char c = 0;
     int curr = 0;
     
@@ -39,7 +39,6 @@ int get_line(char* line, FILE* fp){
     line[curr-1] = 0;
     return curr - 1;
 }
-
 
 
 /*
@@ -59,10 +58,8 @@ to - sausage //ЭТО нужный размер бинарника
 */
 
 
-
 int file_size(char* file){
     assert(file != NULL);
-
     FILE* fb = fopen(file, "rb");
     assert(fb != NULL);
 
@@ -71,6 +68,7 @@ int file_size(char* file){
     fclose(fb);
     return size;
 }
+
 
 int is_possible_to_add(char* to, char from){
     assert(to != NULL);
@@ -91,11 +89,9 @@ void read_data_and_create_bin(char* file){
     FILE* fb = fopen(file, "r");
     FILE* fd = fopen("temp.bin", "wb");
     assert(fb != NULL);
-
     char* buffer = (char*)calloc(file_size(file), sizeof(char));
     char* to = buffer;
     char from = getc(fb);
-    
     *to = from;
     to++;
     int count = 1;
@@ -115,6 +111,7 @@ void read_data_and_create_bin(char* file){
             count++;
         }
     }
+
     if(*(to-1) != 0){
         *to = 0;
         count++;
@@ -126,18 +123,18 @@ void read_data_and_create_bin(char* file){
     fclose(fb);
 }
 
+
 int read_bin(char** data){
     assert(data != NULL);
     FILE* fb = fopen("temp.bin", "rb");
     assert(fb != NULL);
     int count = 0;
-
     count = file_size("temp.bin");
-
     line = (char*)calloc(count, sizeof(char));
     fread(line, sizeof(char), count, fb);
     data[0] = line;
     int lines_count = 1;
+
     for(int i = 0; i < count; i++){
         if(line[i] == '\0'){
             data[lines_count] = (line + i + 1);
@@ -146,8 +143,6 @@ int read_bin(char** data){
     }    
     fclose(fb);
     return lines_count;
-    
-    return 0;
 }
 
 void print_data(char** data, int count){
@@ -170,10 +165,10 @@ void save_line(char* line, FILE* fp){
     putc('\n', fp);
 }
 
+
 void save_data(char** data, int count, char* file){
     assert(data != NULL);
     assert(file != NULL);
-
     FILE* fp = fopen(file, "w");
     assert(fp != NULL);
 
@@ -184,10 +179,10 @@ void save_data(char** data, int count, char* file){
 }
 
 
-
 void free_data(){
     free(line);
 }
+
 
 int old_read_data(char** data, char* file, int count){
     assert(data != NULL);
