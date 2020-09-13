@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['get_5fline_30',['get_line',['../data_8h.html#a0691b67c1879047d559d6a5417151eb3',1,'get_line(char *line, FILE *fp):&#160;data.c'],['../data_8c.html#a0691b67c1879047d559d6a5417151eb3',1,'get_line(char *line, FILE *fp):&#160;data.c']]]
+  ['file_5fsize_36',['file_size',['../data_8h.html#a2e6f33c71b479e7aa9121b9289ad1765',1,'file_size(char *file):&#160;data.c'],['../data_8c.html#a2e6f33c71b479e7aa9121b9289ad1765',1,'file_size(char *file):&#160;data.c']]],
+  ['free_5fdata_37',['free_data',['../data_8h.html#addf8102aa789e3a20b5e9950f5f2ceeb',1,'free_data(struct strophe *data, char *buffer_for_strings):&#160;data.c'],['../data_8c.html#addf8102aa789e3a20b5e9950f5f2ceeb',1,'free_data(struct strophe *data, char *buffer_for_strings):&#160;data.c']]]
 ];

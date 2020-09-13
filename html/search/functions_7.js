@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['read_5fbin_34',['read_bin',['../data_8h.html#ad4b49069d5f8b1fed989418160750943',1,'read_bin(char **data):&#160;data.c'],['../data_8c.html#ad4b49069d5f8b1fed989418160750943',1,'read_bin(char **data):&#160;data.c']]],
-  ['read_5fdata_5fand_5fcreate_5fbin_35',['read_data_and_create_bin',['../data_8h.html#acf3b4c91f1339bf83232943ff7e11907',1,'read_data_and_create_bin(char **data, char *file, int count):&#160;data.c'],['../data_8c.html#acf3b4c91f1339bf83232943ff7e11907',1,'read_data_and_create_bin(char **data, char *file, int count):&#160;data.c']]]
+  ['read_5fbin_42',['read_bin',['../data_8h.html#af2832b9dcf7ef001cc7c775d7ecf2b7b',1,'read_bin(struct strophe *data, int count, char *bin_file):&#160;data.c'],['../data_8c.html#af2832b9dcf7ef001cc7c775d7ecf2b7b',1,'read_bin(struct strophe *data, int count, char *bin_file):&#160;data.c']]],
+  ['read_5fdata_43',['read_data',['../data_8h.html#a59afb16e078f710f93bd78d1fd736ad2',1,'read_data(struct strophe *data, char *file):&#160;data.c'],['../data_8c.html#a59afb16e078f710f93bd78d1fd736ad2',1,'read_data(struct strophe *data, char *file):&#160;data.c']]],
+  ['recreate_5fdata_44',['recreate_data',['../data_8h.html#a49755497168590133ed1b4d3a068b710',1,'recreate_data(struct strophe *data, const char *ptr_on_buff, int num_of_lines):&#160;data.c'],['../data_8c.html#a49755497168590133ed1b4d3a068b710',1,'recreate_data(struct strophe *data, const char *ptr_on_buff, int num_of_lines):&#160;data.c']]]
 ];

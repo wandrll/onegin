@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['print_5fdata_33',['print_data',['../data_8h.html#ab5221f3f63a9833b06a64b93eec7d8fe',1,'print_data(char **data, int count):&#160;data.c'],['../data_8c.html#ab5221f3f63a9833b06a64b93eec7d8fe',1,'print_data(char **data, int count):&#160;data.c']]]
+  ['normalize_41',['normalize',['../sort_8c.html#a6ddeedd29f53186c0f18c13a44261d9d',1,'sort.c']]]
 ];

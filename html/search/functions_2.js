@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['free_5fdata_29',['free_data',['../data_8h.html#a0560e51933aa4447c28d1fea6f3dbbd0',1,'free_data(char **data, int lines_count):&#160;data.c'],['../data_8c.html#a0560e51933aa4447c28d1fea6f3dbbd0',1,'free_data(char **data, int lines_count):&#160;data.c']]]
+  ['data_5fmem_5falloc_35',['data_mem_alloc',['../data_8h.html#a0d9df2d498a6781b6f501b08298beef5',1,'data_mem_alloc(int count):&#160;data.c'],['../data_8c.html#a0d9df2d498a6781b6f501b08298beef5',1,'data_mem_alloc(int count):&#160;data.c']]]
 ];

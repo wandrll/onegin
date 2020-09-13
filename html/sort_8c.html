@@ -62,9 +62,7 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#typedef-members">Typedefs</a> &#124;
-<a href="#func-members">Functions</a> &#124;
-<a href="#var-members">Variables</a>  </div>
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">sort.c File Reference</div>  </div>
 </div><!--header-->
@@ -73,76 +71,70 @@ $(function() {
 <code>#include &lt;stdlib.h&gt;</code><br />
 <code>#include &lt;string.h&gt;</code><br />
 <code>#include &lt;assert.h&gt;</code><br />
+<code>#include &lt;ctype.h&gt;</code><br />
 <code>#include &quot;<a class="el" href="sort_8h_source.html">sort.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="data_8h_source.html">data.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for sort.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="sort_8c__incl.png" border="0" usemap="#sort_8c" alt=""/></div>
 <map name="sort_8c" id="sort_8c">
-<area shape="rect" title=" " alt="" coords="125,5,184,32"/>
-<area shape="rect" title=" " alt="" coords="130,155,197,181"/>
-<area shape="rect" title=" " alt="" coords="24,80,95,107"/>
-<area shape="rect" title=" " alt="" coords="119,80,190,107"/>
-<area shape="rect" title=" " alt="" coords="214,80,289,107"/>
-<area shape="rect" href="sort_8h.html" title=" " alt="" coords="313,80,372,107"/>
+<area shape="rect" title=" " alt="" coords="234,5,293,32"/>
+<area shape="rect" title=" " alt="" coords="417,155,483,181"/>
+<area shape="rect" title=" " alt="" coords="5,155,76,181"/>
+<area shape="rect" title=" " alt="" coords="131,80,201,107"/>
+<area shape="rect" title=" " alt="" coords="226,80,301,107"/>
+<area shape="rect" title=" " alt="" coords="325,80,396,107"/>
+<area shape="rect" href="sort_8h.html" title=" " alt="" coords="421,80,479,107"/>
+<area shape="rect" href="data_8h.html" title=" " alt="" coords="44,80,107,107"/>
 </map>
 </div>
 </div><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
-Typedefs</h2></td></tr>
-<tr class="memitem:a1728669ffad1ba2183ac639f89cbcdd6"><td class="memItemLeft" align="right" valign="top">typedef int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sort_8c.html#a1728669ffad1ba2183ac639f89cbcdd6">comp_type</a>) (void *, void *)</td></tr>
-<tr class="separator:a1728669ffad1ba2183ac639f89cbcdd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:aab1d54c5985c3f155449a82d2468eebb"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sort_8c.html#aab1d54c5985c3f155449a82d2468eebb">clean_string</a> (char *line)</td></tr>
-<tr class="memdesc:aab1d54c5985c3f155449a82d2468eebb"><td class="mdescLeft">&#160;</td><td class="mdescRight"><ul>
-<li>очистка строки от мусора(цифры, знаки препинания и др.) </li>
+<tr class="memitem:a6ddeedd29f53186c0f18c13a44261d9d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sort_8c.html#a6ddeedd29f53186c0f18c13a44261d9d">normalize</a> (const char *letter)</td></tr>
+<tr class="memdesc:a6ddeedd29f53186c0f18c13a44261d9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">some magic numbers для работы с русскими буквами.(я знаю что это просто ужасно, но по-другому русские буквы у меня не работают)  <a href="sort_8c.html#a6ddeedd29f53186c0f18c13a44261d9d">More...</a><br /></td></tr>
+<tr class="separator:a6ddeedd29f53186c0f18c13a44261d9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa18578838c9e72a6ddea6bbd221ae043"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sort_8c.html#aa18578838c9e72a6ddea6bbd221ae043">string_compare_straight</a> (const char *line1, const char *line2)</td></tr>
+<tr class="memdesc:aa18578838c9e72a6ddea6bbd221ae043"><td class="mdescLeft">&#160;</td><td class="mdescRight"><ul>
+<li>прямое сравнение строк </li>
 </ul>
- <a href="sort_8c.html#aab1d54c5985c3f155449a82d2468eebb">More...</a><br /></td></tr>
-<tr class="separator:aab1d54c5985c3f155449a82d2468eebb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5e2de5241d956430cf502cca82452e2b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sort_8c.html#a5e2de5241d956430cf502cca82452e2b">string_compare</a> (const char *line1, const char *line2)</td></tr>
-<tr class="memdesc:a5e2de5241d956430cf502cca82452e2b"><td class="mdescLeft">&#160;</td><td class="mdescRight"><ul>
-<li>сравнение двух строк </li>
-</ul>
- <a href="sort_8c.html#a5e2de5241d956430cf502cca82452e2b">More...</a><br /></td></tr>
-<tr class="separator:a5e2de5241d956430cf502cca82452e2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa8325dd1c3cb1d64c35d606d6723115e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sort_8c.html#aa8325dd1c3cb1d64c35d606d6723115e">sort_string_compare</a> (void *line1, void *line2)</td></tr>
-<tr class="memdesc:aa8325dd1c3cb1d64c35d606d6723115e"><td class="mdescLeft">&#160;</td><td class="mdescRight"><ul>
+ <a href="sort_8c.html#aa18578838c9e72a6ddea6bbd221ae043">More...</a><br /></td></tr>
+<tr class="separator:aa18578838c9e72a6ddea6bbd221ae043"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf00251fa4fbbcb3bd2d62d15acc0198"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sort_8c.html#abf00251fa4fbbcb3bd2d62d15acc0198">sort_strophe_compare_straight</a> (const void *string1, const void *string2)</td></tr>
+<tr class="memdesc:abf00251fa4fbbcb3bd2d62d15acc0198"><td class="mdescLeft">&#160;</td><td class="mdescRight"><ul>
 <li>обертка для сравнения двух строк </li>
 </ul>
- <a href="sort_8c.html#aa8325dd1c3cb1d64c35d606d6723115e">More...</a><br /></td></tr>
-<tr class="separator:aa8325dd1c3cb1d64c35d606d6723115e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a118507087619afc23b7666b4e28d5887"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sort_8c.html#a118507087619afc23b7666b4e28d5887">bubble_sort</a> (void *data, int start, int end, <a class="el" href="sort_8c.html#a1728669ffad1ba2183ac639f89cbcdd6">comp_type</a> comp, size_t size)</td></tr>
-<tr class="memdesc:a118507087619afc23b7666b4e28d5887"><td class="mdescLeft">&#160;</td><td class="mdescRight"><ul>
+ <a href="sort_8c.html#abf00251fa4fbbcb3bd2d62d15acc0198">More...</a><br /></td></tr>
+<tr class="separator:abf00251fa4fbbcb3bd2d62d15acc0198"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a806c04c4950e1da3edf25529781e7d4f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sort_8c.html#a806c04c4950e1da3edf25529781e7d4f">string_compare_reversed</a> (const char *line1, int len1, const char *line2, int len2)</td></tr>
+<tr class="memdesc:a806c04c4950e1da3edf25529781e7d4f"><td class="mdescLeft">&#160;</td><td class="mdescRight"><ul>
+<li>обратное двух строк </li>
+</ul>
+ <a href="sort_8c.html#a806c04c4950e1da3edf25529781e7d4f">More...</a><br /></td></tr>
+<tr class="separator:a806c04c4950e1da3edf25529781e7d4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa17fb5495d33d4deab4043b2c486f2b6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sort_8c.html#aa17fb5495d33d4deab4043b2c486f2b6">sort_strophe_compare_reversed</a> (const void *string1, const void *string2)</td></tr>
+<tr class="memdesc:aa17fb5495d33d4deab4043b2c486f2b6"><td class="mdescLeft">&#160;</td><td class="mdescRight"><ul>
+<li>обертка для сравнения двух строк </li>
+</ul>
+ <a href="sort_8c.html#aa17fb5495d33d4deab4043b2c486f2b6">More...</a><br /></td></tr>
+<tr class="separator:aa17fb5495d33d4deab4043b2c486f2b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e5db871f4c6ee13230e00184e5ffa97"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sort_8c.html#a5e5db871f4c6ee13230e00184e5ffa97">bubble_sort</a> (void *data, int start, int end, int(*comp)(const void *, const void *), size_t size)</td></tr>
+<tr class="memdesc:a5e5db871f4c6ee13230e00184e5ffa97"><td class="mdescLeft">&#160;</td><td class="mdescRight"><ul>
 <li>старая добрая сортировка пузырьком, но уже для любых типов </li>
 </ul>
- <a href="sort_8c.html#a118507087619afc23b7666b4e28d5887">More...</a><br /></td></tr>
-<tr class="separator:a118507087619afc23b7666b4e28d5887"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
-Variables</h2></td></tr>
-<tr class="memitem:adb79d1d7af7d8683c515e034c7628137"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sort_8c.html#adb79d1d7af7d8683c515e034c7628137">max_possible_chars</a> = 1000</td></tr>
-<tr class="separator:adb79d1d7af7d8683c515e034c7628137"><td class="memSeparator" colspan="2">&#160;</td></tr>
+ <a href="sort_8c.html#a5e5db871f4c6ee13230e00184e5ffa97">More...</a><br /></td></tr>
+<tr class="separator:a5e5db871f4c6ee13230e00184e5ffa97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4aa8f50173c24335345971677afeb561"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sort_8c.html#a4aa8f50173c24335345971677afeb561">merge_sort</a> (void *data, int count, int(*comp)(const void *, const void *), size_t size)</td></tr>
+<tr class="memdesc:a4aa8f50173c24335345971677afeb561"><td class="mdescLeft">&#160;</td><td class="mdescRight"><ul>
+<li>сортировка слиянием </li>
+</ul>
+ <a href="sort_8c.html#a4aa8f50173c24335345971677afeb561">More...</a><br /></td></tr>
+<tr class="separator:a4aa8f50173c24335345971677afeb561"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Typedef Documentation</h2>
-<a id="a1728669ffad1ba2183ac639f89cbcdd6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1728669ffad1ba2183ac639f89cbcdd6">&#9670;&nbsp;</a></span>comp_type</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef int(* comp_type) (void *, void *)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a118507087619afc23b7666b4e28d5887"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a118507087619afc23b7666b4e28d5887">&#9670;&nbsp;</a></span>bubble_sort()</h2>
+<a id="a5e5db871f4c6ee13230e00184e5ffa97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e5db871f4c6ee13230e00184e5ffa97">&#9670;&nbsp;</a></span>bubble_sort()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -168,7 +160,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="sort_8c.html#a1728669ffad1ba2183ac639f89cbcdd6">comp_type</a>&#160;</td>
+          <td class="paramtype">int(*)(const void *, const void *)&#160;</td>
           <td class="paramname"><em>comp</em>, </td>
         </tr>
         <tr>
@@ -199,65 +191,122 @@ Variables</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a4aa8f50173c24335345971677afeb561"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4aa8f50173c24335345971677afeb561">&#9670;&nbsp;</a></span>merge_sort()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void merge_sort </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>count</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int(*)(const void *, const void *)&#160;</td>
+          <td class="paramname"><em>comp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><ul>
+<li>сортировка слиянием </li>
+</ul>
+</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>- указатель на начало массива который нужно сортировать </td></tr>
+    <tr><td class="paramname">count</td><td>- количество элементов </td></tr>
+    <tr><td class="paramname">comp</td><td>- функция сравнения двух элементов </td></tr>
+    <tr><td class="paramname">size</td><td>- размер одного элемента </td></tr>
+  </table>
+  </dd>
+</dl>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="sort_8c_a118507087619afc23b7666b4e28d5887_icgraph.png" border="0" usemap="#sort_8c_a118507087619afc23b7666b4e28d5887_icgraph" alt=""/></div>
-<map name="sort_8c_a118507087619afc23b7666b4e28d5887_icgraph" id="sort_8c_a118507087619afc23b7666b4e28d5887_icgraph">
-<area shape="rect" title="старая добрая сортировка пузырьком, но уже для любых типов" alt="" coords="108,5,207,32"/>
+<div class="center"><img src="sort_8c_a4aa8f50173c24335345971677afeb561_icgraph.png" border="0" usemap="#sort_8c_a4aa8f50173c24335345971677afeb561_icgraph" alt=""/></div>
+<map name="sort_8c_a4aa8f50173c24335345971677afeb561_icgraph" id="sort_8c_a4aa8f50173c24335345971677afeb561_icgraph">
+<area shape="rect" title="сортировка слиянием" alt="" coords="108,5,204,32"/>
 <area shape="rect" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Вызов разных функций" alt="" coords="5,5,60,32"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="aab1d54c5985c3f155449a82d2468eebb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aab1d54c5985c3f155449a82d2468eebb">&#9670;&nbsp;</a></span>clean_string()</h2>
+<a id="a6ddeedd29f53186c0f18c13a44261d9d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ddeedd29f53186c0f18c13a44261d9d">&#9670;&nbsp;</a></span>normalize()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">char* clean_string </td>
+          <td class="memname">int normalize </td>
           <td>(</td>
-          <td class="paramtype">char *&#160;</td>
-          <td class="paramname"><em>line</em></td><td>)</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>letter</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p><ul>
-<li>очистка строки от мусора(цифры, знаки препинания и др.) </li>
-</ul>
-</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">line</td><td>- указатель на строку которую нужно очистить </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>указатель на новую очищенную строку(Старая остается неизменной) </dd></dl>
+<p>some magic numbers для работы с русскими буквами.(я знаю что это просто ужасно, но по-другому русские буквы у меня не работают) </p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="sort_8c_a6ddeedd29f53186c0f18c13a44261d9d_icgraph.png" border="0" usemap="#sort_8c_a6ddeedd29f53186c0f18c13a44261d9d_icgraph" alt=""/></div>
+<map name="sort_8c_a6ddeedd29f53186c0f18c13a44261d9d_icgraph" id="sort_8c_a6ddeedd29f53186c0f18c13a44261d9d_icgraph">
+<area shape="rect" title="some magic numbers для работы с русскими буквами.(я знаю что это просто ужасно, но по&#45;другому русские..." alt="" coords="557,46,644,73"/>
+<area shape="rect" href="sort_8c.html#a806c04c4950e1da3edf25529781e7d4f" title="обратное двух строк" alt="" coords="323,17,509,43"/>
+<area shape="rect" href="sort_8c.html#aa18578838c9e72a6ddea6bbd221ae043" title="прямое сравнение строк" alt="" coords="326,71,506,98"/>
+<area shape="rect" href="sort_8c.html#aa17fb5495d33d4deab4043b2c486f2b6" title="обертка для сравнения двух строк" alt="" coords="108,5,275,47"/>
+<area shape="rect" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Вызов разных функций" alt="" coords="5,46,60,73"/>
+<area shape="rect" href="sort_8c.html#abf00251fa4fbbcb3bd2d62d15acc0198" title="обертка для сравнения двух строк" alt="" coords="108,71,275,112"/>
+</map>
+</div>
 
 </div>
 </div>
-<a id="aa8325dd1c3cb1d64c35d606d6723115e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa8325dd1c3cb1d64c35d606d6723115e">&#9670;&nbsp;</a></span>sort_string_compare()</h2>
+<a id="aa17fb5495d33d4deab4043b2c486f2b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa17fb5495d33d4deab4043b2c486f2b6">&#9670;&nbsp;</a></span>sort_strophe_compare_reversed()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int sort_string_compare </td>
+          <td class="memname">int sort_strophe_compare_reversed </td>
           <td>(</td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>line1</em>, </td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>string1</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>line2</em>&#160;</td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>string2</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -275,32 +324,151 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="sort_8c_aa8325dd1c3cb1d64c35d606d6723115e_cgraph.png" border="0" usemap="#sort_8c_aa8325dd1c3cb1d64c35d606d6723115e_cgraph" alt=""/></div>
-<map name="sort_8c_aa8325dd1c3cb1d64c35d606d6723115e_cgraph" id="sort_8c_aa8325dd1c3cb1d64c35d606d6723115e_cgraph">
-<area shape="rect" title="обертка для сравнения двух строк" alt="" coords="5,5,160,32"/>
-<area shape="rect" href="sort_8c.html#a5e2de5241d956430cf502cca82452e2b" title="сравнение двух строк" alt="" coords="208,5,331,32"/>
+<div class="center"><img src="sort_8c_aa17fb5495d33d4deab4043b2c486f2b6_cgraph.png" border="0" usemap="#sort_8c_aa17fb5495d33d4deab4043b2c486f2b6_cgraph" alt=""/></div>
+<map name="sort_8c_aa17fb5495d33d4deab4043b2c486f2b6_cgraph" id="sort_8c_aa17fb5495d33d4deab4043b2c486f2b6_cgraph">
+<area shape="rect" title="обертка для сравнения двух строк" alt="" coords="5,5,172,47"/>
+<area shape="rect" href="sort_8c.html#a806c04c4950e1da3edf25529781e7d4f" title="обратное двух строк" alt="" coords="220,13,407,39"/>
+<area shape="rect" href="sort_8c.html#a6ddeedd29f53186c0f18c13a44261d9d" title="some magic numbers для работы с русскими буквами.(я знаю что это просто ужасно, но по&#45;другому русские..." alt="" coords="455,13,541,39"/>
 </map>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="sort_8c_aa8325dd1c3cb1d64c35d606d6723115e_icgraph.png" border="0" usemap="#sort_8c_aa8325dd1c3cb1d64c35d606d6723115e_icgraph" alt=""/></div>
-<map name="sort_8c_aa8325dd1c3cb1d64c35d606d6723115e_icgraph" id="sort_8c_aa8325dd1c3cb1d64c35d606d6723115e_icgraph">
-<area shape="rect" title="обертка для сравнения двух строк" alt="" coords="108,5,263,32"/>
-<area shape="rect" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Вызов разных функций" alt="" coords="5,5,60,32"/>
+<div class="center"><img src="sort_8c_aa17fb5495d33d4deab4043b2c486f2b6_icgraph.png" border="0" usemap="#sort_8c_aa17fb5495d33d4deab4043b2c486f2b6_icgraph" alt=""/></div>
+<map name="sort_8c_aa17fb5495d33d4deab4043b2c486f2b6_icgraph" id="sort_8c_aa17fb5495d33d4deab4043b2c486f2b6_icgraph">
+<area shape="rect" title="обертка для сравнения двух строк" alt="" coords="108,5,275,47"/>
+<area shape="rect" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Вызов разных функций" alt="" coords="5,13,60,39"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a5e2de5241d956430cf502cca82452e2b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5e2de5241d956430cf502cca82452e2b">&#9670;&nbsp;</a></span>string_compare()</h2>
+<a id="abf00251fa4fbbcb3bd2d62d15acc0198"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf00251fa4fbbcb3bd2d62d15acc0198">&#9670;&nbsp;</a></span>sort_strophe_compare_straight()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int string_compare </td>
+          <td class="memname">int sort_strophe_compare_straight </td>
+          <td>(</td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>string1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>string2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><ul>
+<li>обертка для сравнения двух строк </li>
+</ul>
+</p>
+<dl class="section return"><dt>Returns</dt><dd>число &gt; или &lt; 0, в зависимости от результата сравнения </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="sort_8c_abf00251fa4fbbcb3bd2d62d15acc0198_cgraph.png" border="0" usemap="#sort_8c_abf00251fa4fbbcb3bd2d62d15acc0198_cgraph" alt=""/></div>
+<map name="sort_8c_abf00251fa4fbbcb3bd2d62d15acc0198_cgraph" id="sort_8c_abf00251fa4fbbcb3bd2d62d15acc0198_cgraph">
+<area shape="rect" title="обертка для сравнения двух строк" alt="" coords="5,5,172,47"/>
+<area shape="rect" href="sort_8c.html#aa18578838c9e72a6ddea6bbd221ae043" title="прямое сравнение строк" alt="" coords="220,13,400,39"/>
+<area shape="rect" href="sort_8c.html#a6ddeedd29f53186c0f18c13a44261d9d" title="some magic numbers для работы с русскими буквами.(я знаю что это просто ужасно, но по&#45;другому русские..." alt="" coords="448,13,535,39"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="sort_8c_abf00251fa4fbbcb3bd2d62d15acc0198_icgraph.png" border="0" usemap="#sort_8c_abf00251fa4fbbcb3bd2d62d15acc0198_icgraph" alt=""/></div>
+<map name="sort_8c_abf00251fa4fbbcb3bd2d62d15acc0198_icgraph" id="sort_8c_abf00251fa4fbbcb3bd2d62d15acc0198_icgraph">
+<area shape="rect" title="обертка для сравнения двух строк" alt="" coords="108,5,275,47"/>
+<area shape="rect" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Вызов разных функций" alt="" coords="5,13,60,39"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a806c04c4950e1da3edf25529781e7d4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a806c04c4950e1da3edf25529781e7d4f">&#9670;&nbsp;</a></span>string_compare_reversed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int string_compare_reversed </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>len1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>len2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><ul>
+<li>обратное двух строк </li>
+</ul>
+</p>
+<dl class="section return"><dt>Returns</dt><dd>число &gt; или &lt; 0, в зависимости от результата сравнения </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="sort_8c_a806c04c4950e1da3edf25529781e7d4f_cgraph.png" border="0" usemap="#sort_8c_a806c04c4950e1da3edf25529781e7d4f_cgraph" alt=""/></div>
+<map name="sort_8c_a806c04c4950e1da3edf25529781e7d4f_cgraph" id="sort_8c_a806c04c4950e1da3edf25529781e7d4f_cgraph">
+<area shape="rect" title="обратное двух строк" alt="" coords="5,5,192,32"/>
+<area shape="rect" href="sort_8c.html#a6ddeedd29f53186c0f18c13a44261d9d" title="some magic numbers для работы с русскими буквами.(я знаю что это просто ужасно, но по&#45;другому русские..." alt="" coords="240,5,327,32"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="sort_8c_a806c04c4950e1da3edf25529781e7d4f_icgraph.png" border="0" usemap="#sort_8c_a806c04c4950e1da3edf25529781e7d4f_icgraph" alt=""/></div>
+<map name="sort_8c_a806c04c4950e1da3edf25529781e7d4f_icgraph" id="sort_8c_a806c04c4950e1da3edf25529781e7d4f_icgraph">
+<area shape="rect" title="обратное двух строк" alt="" coords="323,13,509,39"/>
+<area shape="rect" href="sort_8c.html#aa17fb5495d33d4deab4043b2c486f2b6" title="обертка для сравнения двух строк" alt="" coords="108,5,275,47"/>
+<area shape="rect" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Вызов разных функций" alt="" coords="5,13,60,39"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa18578838c9e72a6ddea6bbd221ae043"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa18578838c9e72a6ddea6bbd221ae043">&#9670;&nbsp;</a></span>string_compare_straight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int string_compare_straight </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
           <td class="paramname"><em>a</em>, </td>
@@ -320,35 +488,29 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p><ul>
-<li>сравнение двух строк </li>
+<li>прямое сравнение строк </li>
 </ul>
 </p>
 <dl class="section return"><dt>Returns</dt><dd>число &gt; или &lt; 0, в зависимости от результата сравнения </dd></dl>
 <div class="dynheader">
-Here is the caller graph for this function:</div>
+Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="sort_8c_a5e2de5241d956430cf502cca82452e2b_icgraph.png" border="0" usemap="#sort_8c_a5e2de5241d956430cf502cca82452e2b_icgraph" alt=""/></div>
-<map name="sort_8c_a5e2de5241d956430cf502cca82452e2b_icgraph" id="sort_8c_a5e2de5241d956430cf502cca82452e2b_icgraph">
-<area shape="rect" title="сравнение двух строк" alt="" coords="311,5,433,32"/>
-<area shape="rect" href="sort_8c.html#aa8325dd1c3cb1d64c35d606d6723115e" title="обертка для сравнения двух строк" alt="" coords="108,5,263,32"/>
-<area shape="rect" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Вызов разных функций" alt="" coords="5,5,60,32"/>
+<div class="center"><img src="sort_8c_aa18578838c9e72a6ddea6bbd221ae043_cgraph.png" border="0" usemap="#sort_8c_aa18578838c9e72a6ddea6bbd221ae043_cgraph" alt=""/></div>
+<map name="sort_8c_aa18578838c9e72a6ddea6bbd221ae043_cgraph" id="sort_8c_aa18578838c9e72a6ddea6bbd221ae043_cgraph">
+<area shape="rect" title="прямое сравнение строк" alt="" coords="5,5,185,32"/>
+<area shape="rect" href="sort_8c.html#a6ddeedd29f53186c0f18c13a44261d9d" title="some magic numbers для работы с русскими буквами.(я знаю что это просто ужасно, но по&#45;другому русские..." alt="" coords="233,5,320,32"/>
 </map>
 </div>
-
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="sort_8c_aa18578838c9e72a6ddea6bbd221ae043_icgraph.png" border="0" usemap="#sort_8c_aa18578838c9e72a6ddea6bbd221ae043_icgraph" alt=""/></div>
+<map name="sort_8c_aa18578838c9e72a6ddea6bbd221ae043_icgraph" id="sort_8c_aa18578838c9e72a6ddea6bbd221ae043_icgraph">
+<area shape="rect" title="прямое сравнение строк" alt="" coords="323,13,503,39"/>
+<area shape="rect" href="sort_8c.html#abf00251fa4fbbcb3bd2d62d15acc0198" title="обертка для сравнения двух строк" alt="" coords="108,5,275,47"/>
+<area shape="rect" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Вызов разных функций" alt="" coords="5,13,60,39"/>
+</map>
 </div>
-</div>
-<h2 class="groupheader">Variable Documentation</h2>
-<a id="adb79d1d7af7d8683c515e034c7628137"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adb79d1d7af7d8683c515e034c7628137">&#9670;&nbsp;</a></span>max_possible_chars</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const int max_possible_chars = 1000</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
 
 </div>
 </div>

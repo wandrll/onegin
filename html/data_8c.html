@@ -62,8 +62,7 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#func-members">Functions</a> &#124;
-<a href="#var-members">Variables</a>  </div>
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">data.c File Reference</div>  </div>
 </div><!--header-->
@@ -71,15 +70,19 @@ $(function() {
 <div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
 <code>#include &lt;stdlib.h&gt;</code><br />
 <code>#include &lt;assert.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="data_8h_source.html">data.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for data.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="data_8c__incl.png" border="0" usemap="#data_8c" alt=""/></div>
 <map name="data_8c" id="data_8c">
-<area shape="rect" title=" " alt="" coords="101,5,163,32"/>
-<area shape="rect" title=" " alt="" coords="5,80,72,107"/>
-<area shape="rect" title=" " alt="" coords="97,80,167,107"/>
-<area shape="rect" title=" " alt="" coords="192,80,267,107"/>
+<area shape="rect" title=" " alt="" coords="135,5,198,32"/>
+<area shape="rect" title=" " alt="" coords="5,155,72,181"/>
+<area shape="rect" title=" " alt="" coords="199,155,270,181"/>
+<area shape="rect" title=" " alt="" coords="129,80,204,107"/>
+<area shape="rect" title=" " alt="" coords="229,80,299,107"/>
+<area shape="rect" href="data_8h.html" title=" " alt="" coords="42,80,105,107"/>
 </map>
 </div>
 </div><table class="memberdecls">
@@ -88,36 +91,154 @@ Functions</h2></td></tr>
 <tr class="memitem:a4e03cfe06968f901a5ad0ff65c97c6ee"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="data_8c.html#a4e03cfe06968f901a5ad0ff65c97c6ee">lines_count</a> (char *file)</td></tr>
 <tr class="memdesc:a4e03cfe06968f901a5ad0ff65c97c6ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">находит количество переходов на новую строку  <a href="data_8c.html#a4e03cfe06968f901a5ad0ff65c97c6ee">More...</a><br /></td></tr>
 <tr class="separator:a4e03cfe06968f901a5ad0ff65c97c6ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0691b67c1879047d559d6a5417151eb3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="data_8c.html#a0691b67c1879047d559d6a5417151eb3">get_line</a> (char *line, FILE *fp)</td></tr>
-<tr class="memdesc:a0691b67c1879047d559d6a5417151eb3"><td class="mdescLeft">&#160;</td><td class="mdescRight">считывает одну строку из файла  <a href="data_8c.html#a0691b67c1879047d559d6a5417151eb3">More...</a><br /></td></tr>
-<tr class="separator:a0691b67c1879047d559d6a5417151eb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acf3b4c91f1339bf83232943ff7e11907"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="data_8c.html#acf3b4c91f1339bf83232943ff7e11907">read_data_and_create_bin</a> (char **data, char *file, int count)</td></tr>
-<tr class="memdesc:acf3b4c91f1339bf83232943ff7e11907"><td class="mdescLeft">&#160;</td><td class="mdescRight">считывает все строки из файла и сохраняет их в файл temp.bin в формате "количество символов, строка".  <a href="data_8c.html#acf3b4c91f1339bf83232943ff7e11907">More...</a><br /></td></tr>
-<tr class="separator:acf3b4c91f1339bf83232943ff7e11907"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad4b49069d5f8b1fed989418160750943"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="data_8c.html#ad4b49069d5f8b1fed989418160750943">read_bin</a> (char **data)</td></tr>
-<tr class="memdesc:ad4b49069d5f8b1fed989418160750943"><td class="mdescLeft">&#160;</td><td class="mdescRight">считывает строки из файла temp.bin.  <a href="data_8c.html#ad4b49069d5f8b1fed989418160750943">More...</a><br /></td></tr>
-<tr class="separator:ad4b49069d5f8b1fed989418160750943"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab5221f3f63a9833b06a64b93eec7d8fe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="data_8c.html#ab5221f3f63a9833b06a64b93eec7d8fe">print_data</a> (char **data, int count)</td></tr>
-<tr class="memdesc:ab5221f3f63a9833b06a64b93eec7d8fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">печатает все строки  <a href="data_8c.html#ab5221f3f63a9833b06a64b93eec7d8fe">More...</a><br /></td></tr>
-<tr class="separator:ab5221f3f63a9833b06a64b93eec7d8fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7fac2e4985e8d27ad1af1af8e2549592"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="data_8c.html#a7fac2e4985e8d27ad1af1af8e2549592">save_line</a> (char *line, FILE *fp)</td></tr>
-<tr class="memdesc:a7fac2e4985e8d27ad1af1af8e2549592"><td class="mdescLeft">&#160;</td><td class="mdescRight">сохраняет ровно одну строку в файл  <a href="data_8c.html#a7fac2e4985e8d27ad1af1af8e2549592">More...</a><br /></td></tr>
-<tr class="separator:a7fac2e4985e8d27ad1af1af8e2549592"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac72c4f0bcd3b7a1dd3163a869af9787f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="data_8c.html#ac72c4f0bcd3b7a1dd3163a869af9787f">save_data</a> (char **data, int count, char *file)</td></tr>
-<tr class="memdesc:ac72c4f0bcd3b7a1dd3163a869af9787f"><td class="mdescLeft">&#160;</td><td class="mdescRight">сохраняет все строки из массива указателей в файл  <a href="data_8c.html#ac72c4f0bcd3b7a1dd3163a869af9787f">More...</a><br /></td></tr>
-<tr class="separator:ac72c4f0bcd3b7a1dd3163a869af9787f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0560e51933aa4447c28d1fea6f3dbbd0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="data_8c.html#a0560e51933aa4447c28d1fea6f3dbbd0">free_data</a> (char **data, int <a class="el" href="data_8c.html#a4e03cfe06968f901a5ad0ff65c97c6ee">lines_count</a>)</td></tr>
-<tr class="memdesc:a0560e51933aa4447c28d1fea6f3dbbd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">очищает память выделенную для data.  <a href="data_8c.html#a0560e51933aa4447c28d1fea6f3dbbd0">More...</a><br /></td></tr>
-<tr class="separator:a0560e51933aa4447c28d1fea6f3dbbd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
-Variables</h2></td></tr>
-<tr class="memitem:a8096f9e1bfe40511cc401fb1faf86648"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="data_8c.html#a8096f9e1bfe40511cc401fb1faf86648">max_possible_size</a> = 300</td></tr>
-<tr class="separator:a8096f9e1bfe40511cc401fb1faf86648"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e6f33c71b479e7aa9121b9289ad1765"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="data_8c.html#a2e6f33c71b479e7aa9121b9289ad1765">file_size</a> (char *file)</td></tr>
+<tr class="memdesc:a2e6f33c71b479e7aa9121b9289ad1765"><td class="mdescLeft">&#160;</td><td class="mdescRight">возвращает размер файла  <a href="data_8c.html#a2e6f33c71b479e7aa9121b9289ad1765">More...</a><br /></td></tr>
+<tr class="separator:a2e6f33c71b479e7aa9121b9289ad1765"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d9df2d498a6781b6f501b08298beef5"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structstrophe.html">strophe</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="data_8c.html#a0d9df2d498a6781b6f501b08298beef5">data_mem_alloc</a> (int count)</td></tr>
+<tr class="memdesc:a0d9df2d498a6781b6f501b08298beef5"><td class="mdescLeft">&#160;</td><td class="mdescRight">выделение памяти для массива строф  <a href="data_8c.html#a0d9df2d498a6781b6f501b08298beef5">More...</a><br /></td></tr>
+<tr class="separator:a0d9df2d498a6781b6f501b08298beef5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59afb16e078f710f93bd78d1fd736ad2"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="data_8c.html#a59afb16e078f710f93bd78d1fd736ad2">read_data</a> (struct <a class="el" href="structstrophe.html">strophe</a> *data, char *file)</td></tr>
+<tr class="memdesc:a59afb16e078f710f93bd78d1fd736ad2"><td class="mdescLeft">&#160;</td><td class="mdescRight">считывает все строки из файла и сохраняет их в файл temp.bin в формате "количество символов, строка".  <a href="data_8c.html#a59afb16e078f710f93bd78d1fd736ad2">More...</a><br /></td></tr>
+<tr class="separator:a59afb16e078f710f93bd78d1fd736ad2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4727392d18454a4700338d0a51b958c6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="data_8c.html#a4727392d18454a4700338d0a51b958c6">create_bin</a> (const struct <a class="el" href="structstrophe.html">strophe</a> *data, int n, char *file)</td></tr>
+<tr class="memdesc:a4727392d18454a4700338d0a51b958c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">сохраняет строфы в .bin.  <a href="data_8c.html#a4727392d18454a4700338d0a51b958c6">More...</a><br /></td></tr>
+<tr class="separator:a4727392d18454a4700338d0a51b958c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2832b9dcf7ef001cc7c775d7ecf2b7b"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="data_8c.html#af2832b9dcf7ef001cc7c775d7ecf2b7b">read_bin</a> (struct <a class="el" href="structstrophe.html">strophe</a> *data, int count, char *bin_file)</td></tr>
+<tr class="memdesc:af2832b9dcf7ef001cc7c775d7ecf2b7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">считывает строки из файла .bin.  <a href="data_8c.html#af2832b9dcf7ef001cc7c775d7ecf2b7b">More...</a><br /></td></tr>
+<tr class="separator:af2832b9dcf7ef001cc7c775d7ecf2b7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a942440b8415de54dc812b2e20323ca4c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="data_8c.html#a942440b8415de54dc812b2e20323ca4c">save_line</a> (const struct <a class="el" href="structstrophe.html">strophe</a> *line, FILE *fp)</td></tr>
+<tr class="memdesc:a942440b8415de54dc812b2e20323ca4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">сохраняет ровно одну строку в файл  <a href="data_8c.html#a942440b8415de54dc812b2e20323ca4c">More...</a><br /></td></tr>
+<tr class="separator:a942440b8415de54dc812b2e20323ca4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a41143675eebfba966cd17b6d476917"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="data_8c.html#a8a41143675eebfba966cd17b6d476917">save_data</a> (const struct <a class="el" href="structstrophe.html">strophe</a> *data, int count, char *file)</td></tr>
+<tr class="memdesc:a8a41143675eebfba966cd17b6d476917"><td class="mdescLeft">&#160;</td><td class="mdescRight">сохраняет все строки из массива указателей в файл  <a href="data_8c.html#a8a41143675eebfba966cd17b6d476917">More...</a><br /></td></tr>
+<tr class="separator:a8a41143675eebfba966cd17b6d476917"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addf8102aa789e3a20b5e9950f5f2ceeb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="data_8c.html#addf8102aa789e3a20b5e9950f5f2ceeb">free_data</a> (struct <a class="el" href="structstrophe.html">strophe</a> *data, char *buffer_for_strings)</td></tr>
+<tr class="memdesc:addf8102aa789e3a20b5e9950f5f2ceeb"><td class="mdescLeft">&#160;</td><td class="mdescRight">очищает память выделенную для data.  <a href="data_8c.html#addf8102aa789e3a20b5e9950f5f2ceeb">More...</a><br /></td></tr>
+<tr class="separator:addf8102aa789e3a20b5e9950f5f2ceeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49755497168590133ed1b4d3a068b710"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="data_8c.html#a49755497168590133ed1b4d3a068b710">recreate_data</a> (struct <a class="el" href="structstrophe.html">strophe</a> *data, const char *ptr_on_buff, int num_of_lines)</td></tr>
+<tr class="memdesc:a49755497168590133ed1b4d3a068b710"><td class="mdescLeft">&#160;</td><td class="mdescRight">воссоздает массив строф по буферу  <a href="data_8c.html#a49755497168590133ed1b4d3a068b710">More...</a><br /></td></tr>
+<tr class="separator:a49755497168590133ed1b4d3a068b710"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a0560e51933aa4447c28d1fea6f3dbbd0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0560e51933aa4447c28d1fea6f3dbbd0">&#9670;&nbsp;</a></span>free_data()</h2>
+<a id="a4727392d18454a4700338d0a51b958c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4727392d18454a4700338d0a51b958c6">&#9670;&nbsp;</a></span>create_bin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void create_bin </td>
+          <td>(</td>
+          <td class="paramtype">const struct <a class="el" href="structstrophe.html">strophe</a> *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>file</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>сохраняет строфы в .bin. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>указатель на массив строф </td></tr>
+    <tr><td class="paramname">n</td><td>количество строк </td></tr>
+    <tr><td class="paramname">file</td><td>имя бинарника </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0d9df2d498a6781b6f501b08298beef5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d9df2d498a6781b6f501b08298beef5">&#9670;&nbsp;</a></span>data_mem_alloc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="structstrophe.html">strophe</a>* data_mem_alloc </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>count</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>выделение памяти для массива строф </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">count</td><td>количество </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="data_8c_a0d9df2d498a6781b6f501b08298beef5_icgraph.png" border="0" usemap="#data_8c_a0d9df2d498a6781b6f501b08298beef5_icgraph" alt=""/></div>
+<map name="data_8c_a0d9df2d498a6781b6f501b08298beef5_icgraph" id="data_8c_a0d9df2d498a6781b6f501b08298beef5_icgraph">
+<area shape="rect" title="выделение памяти для массива строф" alt="" coords="108,5,239,32"/>
+<area shape="rect" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Вызов разных функций" alt="" coords="5,5,60,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a2e6f33c71b479e7aa9121b9289ad1765"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e6f33c71b479e7aa9121b9289ad1765">&#9670;&nbsp;</a></span>file_size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int file_size </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>file</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>возвращает размер файла </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">file</td><td>имя файла </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>количество байт в файле </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="data_8c_a2e6f33c71b479e7aa9121b9289ad1765_icgraph.png" border="0" usemap="#data_8c_a2e6f33c71b479e7aa9121b9289ad1765_icgraph" alt=""/></div>
+<map name="data_8c_a2e6f33c71b479e7aa9121b9289ad1765_icgraph" id="data_8c_a2e6f33c71b479e7aa9121b9289ad1765_icgraph">
+<area shape="rect" title="возвращает размер файла" alt="" coords="243,31,317,57"/>
+<area shape="rect" href="data_8c.html#af2832b9dcf7ef001cc7c775d7ecf2b7b" title="считывает строки из файла .bin." alt="" coords="112,5,191,32"/>
+<area shape="rect" href="data_8c.html#a59afb16e078f710f93bd78d1fd736ad2" title="считывает все строки из файла и сохраняет их в файл temp.bin в формате &quot;количество символов,..." alt="" coords="108,56,195,83"/>
+<area shape="rect" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Вызов разных функций" alt="" coords="5,5,60,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="addf8102aa789e3a20b5e9950f5f2ceeb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#addf8102aa789e3a20b5e9950f5f2ceeb">&#9670;&nbsp;</a></span>free_data()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -125,14 +246,14 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">void free_data </td>
           <td>(</td>
-          <td class="paramtype">char **&#160;</td>
+          <td class="paramtype">struct <a class="el" href="structstrophe.html">strophe</a> *&#160;</td>
           <td class="paramname"><em>data</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>lines_count</em>&#160;</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>buffer_for_strings</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -145,74 +266,18 @@ Variables</h2></td></tr>
 <p>очищает память выделенную для data. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">data</td><td>указатель на массив указателей </td></tr>
-    <tr><td class="paramname">lines_count</td><td>количество ненулевых строк </td></tr>
+    <tr><td class="paramname">data</td><td>указатель на массив строф </td></tr>
+    <tr><td class="paramname">buffer_for_strings</td><td>указатель на начало буфера </td></tr>
   </table>
   </dd>
 </dl>
 <div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="data_8c_a0560e51933aa4447c28d1fea6f3dbbd0_cgraph.png" border="0" usemap="#data_8c_a0560e51933aa4447c28d1fea6f3dbbd0_cgraph" alt=""/></div>
-<map name="data_8c_a0560e51933aa4447c28d1fea6f3dbbd0_cgraph" id="data_8c_a0560e51933aa4447c28d1fea6f3dbbd0_cgraph">
-<area shape="rect" title="очищает память выделенную для data." alt="" coords="5,5,89,32"/>
-<area shape="rect" href="data_8c.html#a4e03cfe06968f901a5ad0ff65c97c6ee" title="находит количество переходов на новую строку" alt="" coords="137,5,233,32"/>
-</map>
-</div>
-<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="data_8c_a0560e51933aa4447c28d1fea6f3dbbd0_icgraph.png" border="0" usemap="#data_8c_a0560e51933aa4447c28d1fea6f3dbbd0_icgraph" alt=""/></div>
-<map name="data_8c_a0560e51933aa4447c28d1fea6f3dbbd0_icgraph" id="data_8c_a0560e51933aa4447c28d1fea6f3dbbd0_icgraph">
+<div class="center"><img src="data_8c_addf8102aa789e3a20b5e9950f5f2ceeb_icgraph.png" border="0" usemap="#data_8c_addf8102aa789e3a20b5e9950f5f2ceeb_icgraph" alt=""/></div>
+<map name="data_8c_addf8102aa789e3a20b5e9950f5f2ceeb_icgraph" id="data_8c_addf8102aa789e3a20b5e9950f5f2ceeb_icgraph">
 <area shape="rect" title="очищает память выделенную для data." alt="" coords="108,5,192,32"/>
 <area shape="rect" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Вызов разных функций" alt="" coords="5,5,60,32"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="a0691b67c1879047d559d6a5417151eb3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0691b67c1879047d559d6a5417151eb3">&#9670;&nbsp;</a></span>get_line()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int get_line </td>
-          <td>(</td>
-          <td class="paramtype">char *&#160;</td>
-          <td class="paramname"><em>line</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">FILE *&#160;</td>
-          <td class="paramname"><em>fp</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>считывает одну строку из файла </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">line</td><td>указатель на строку куда записать считанную строку </td></tr>
-    <tr><td class="paramname">fp</td><td>указатель на файл </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>количество элементов в строке </dd></dl>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="data_8c_a0691b67c1879047d559d6a5417151eb3_icgraph.png" border="0" usemap="#data_8c_a0691b67c1879047d559d6a5417151eb3_icgraph" alt=""/></div>
-<map name="data_8c_a0691b67c1879047d559d6a5417151eb3_icgraph" id="data_8c_a0691b67c1879047d559d6a5417151eb3_icgraph">
-<area shape="rect" title="считывает одну строку из файла" alt="" coords="247,5,321,32"/>
-<area shape="rect" href="data_8c.html#acf3b4c91f1339bf83232943ff7e11907" title="считывает все строки из файла и сохраняет их в файл temp.bin в формате &quot;количество символов,..." alt="" coords="5,5,199,32"/>
 </map>
 </div>
 
@@ -247,31 +312,36 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="data_8c_a4e03cfe06968f901a5ad0ff65c97c6ee_icgraph.png" border="0" usemap="#data_8c_a4e03cfe06968f901a5ad0ff65c97c6ee_icgraph" alt=""/></div>
 <map name="data_8c_a4e03cfe06968f901a5ad0ff65c97c6ee_icgraph" id="data_8c_a4e03cfe06968f901a5ad0ff65c97c6ee_icgraph">
-<area shape="rect" title="находит количество переходов на новую строку" alt="" coords="240,31,336,57"/>
-<area shape="rect" href="data_8c.html#a0560e51933aa4447c28d1fea6f3dbbd0" title="очищает память выделенную для data." alt="" coords="108,5,192,32"/>
-<area shape="rect" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Вызов разных функций" alt="" coords="5,31,60,57"/>
+<area shape="rect" title="находит количество переходов на новую строку" alt="" coords="108,5,204,32"/>
+<area shape="rect" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Вызов разных функций" alt="" coords="5,5,60,32"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="ab5221f3f63a9833b06a64b93eec7d8fe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab5221f3f63a9833b06a64b93eec7d8fe">&#9670;&nbsp;</a></span>print_data()</h2>
+<a id="af2832b9dcf7ef001cc7c775d7ecf2b7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2832b9dcf7ef001cc7c775d7ecf2b7b">&#9670;&nbsp;</a></span>read_bin()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void print_data </td>
+          <td class="memname">char* read_bin </td>
           <td>(</td>
-          <td class="paramtype">char **&#160;</td>
+          <td class="paramtype">struct <a class="el" href="structstrophe.html">strophe</a> *&#160;</td>
           <td class="paramname"><em>data</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>count</em>&#160;</td>
+          <td class="paramname"><em>count</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>bin_file</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -281,76 +351,54 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>печатает все строки </p>
+<p>считывает строки из файла .bin. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">data</td><td>указатель на массив указателей </td></tr>
-    <tr><td class="paramname">count</td><td>количество строй </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="ad4b49069d5f8b1fed989418160750943"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad4b49069d5f8b1fed989418160750943">&#9670;&nbsp;</a></span>read_bin()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int read_bin </td>
-          <td>(</td>
-          <td class="paramtype">char **&#160;</td>
-          <td class="paramname"><em>data</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>считывает строки из файла temp.bin. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">data</td><td>указатель на массив указателей </td></tr>
+    <tr><td class="paramname">data</td><td>указатель на массив строф </td></tr>
+    <tr><td class="paramname">count</td><td>количество строк </td></tr>
+    <tr><td class="paramname">bin_file</td><td>имя бинарника </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>количество считанных строк </dd></dl>
 <div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="data_8c_af2832b9dcf7ef001cc7c775d7ecf2b7b_cgraph.png" border="0" usemap="#data_8c_af2832b9dcf7ef001cc7c775d7ecf2b7b_cgraph" alt=""/></div>
+<map name="data_8c_af2832b9dcf7ef001cc7c775d7ecf2b7b_cgraph" id="data_8c_af2832b9dcf7ef001cc7c775d7ecf2b7b_cgraph">
+<area shape="rect" title="считывает строки из файла .bin." alt="" coords="5,5,84,32"/>
+<area shape="rect" href="data_8c.html#a2e6f33c71b479e7aa9121b9289ad1765" title="возвращает размер файла" alt="" coords="132,5,207,32"/>
+</map>
+</div>
+<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="data_8c_ad4b49069d5f8b1fed989418160750943_icgraph.png" border="0" usemap="#data_8c_ad4b49069d5f8b1fed989418160750943_icgraph" alt=""/></div>
-<map name="data_8c_ad4b49069d5f8b1fed989418160750943_icgraph" id="data_8c_ad4b49069d5f8b1fed989418160750943_icgraph">
-<area shape="rect" title="считывает строки из файла temp.bin." alt="" coords="108,5,187,32"/>
+<div class="center"><img src="data_8c_af2832b9dcf7ef001cc7c775d7ecf2b7b_icgraph.png" border="0" usemap="#data_8c_af2832b9dcf7ef001cc7c775d7ecf2b7b_icgraph" alt=""/></div>
+<map name="data_8c_af2832b9dcf7ef001cc7c775d7ecf2b7b_icgraph" id="data_8c_af2832b9dcf7ef001cc7c775d7ecf2b7b_icgraph">
+<area shape="rect" title="считывает строки из файла .bin." alt="" coords="108,5,187,32"/>
 <area shape="rect" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Вызов разных функций" alt="" coords="5,5,60,32"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="acf3b4c91f1339bf83232943ff7e11907"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acf3b4c91f1339bf83232943ff7e11907">&#9670;&nbsp;</a></span>read_data_and_create_bin()</h2>
+<a id="a59afb16e078f710f93bd78d1fd736ad2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59afb16e078f710f93bd78d1fd736ad2">&#9670;&nbsp;</a></span>read_data()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int read_data_and_create_bin </td>
+          <td class="memname">char* read_data </td>
           <td>(</td>
-          <td class="paramtype">char **&#160;</td>
+          <td class="paramtype">struct <a class="el" href="structstrophe.html">strophe</a> *&#160;</td>
           <td class="paramname"><em>data</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">char *&#160;</td>
-          <td class="paramname"><em>file</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>count</em>&#160;</td>
+          <td class="paramname"><em>file</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -363,27 +411,80 @@ Here is the caller graph for this function:</div>
 <p>считывает все строки из файла и сохраняет их в файл temp.bin в формате "количество символов, строка". </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">data</td><td>указатель на массив указателей </td></tr>
+    <tr><td class="paramname">data</td><td>указатель на массив строф </td></tr>
     <tr><td class="paramname">file</td><td>имя файла </td></tr>
-    <tr><td class="paramname">count</td><td>количество переходов на новую строку в файле "file" </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>количество не пустых строк в файле </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>указатель на буфер содержащий все данные </dd></dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="data_8c_acf3b4c91f1339bf83232943ff7e11907_cgraph.png" border="0" usemap="#data_8c_acf3b4c91f1339bf83232943ff7e11907_cgraph" alt=""/></div>
-<map name="data_8c_acf3b4c91f1339bf83232943ff7e11907_cgraph" id="data_8c_acf3b4c91f1339bf83232943ff7e11907_cgraph">
-<area shape="rect" title="считывает все строки из файла и сохраняет их в файл temp.bin в формате &quot;количество символов,..." alt="" coords="5,5,199,32"/>
-<area shape="rect" href="data_8c.html#a0691b67c1879047d559d6a5417151eb3" title="считывает одну строку из файла" alt="" coords="247,5,321,32"/>
+<div class="center"><img src="data_8c_a59afb16e078f710f93bd78d1fd736ad2_cgraph.png" border="0" usemap="#data_8c_a59afb16e078f710f93bd78d1fd736ad2_cgraph" alt=""/></div>
+<map name="data_8c_a59afb16e078f710f93bd78d1fd736ad2_cgraph" id="data_8c_a59afb16e078f710f93bd78d1fd736ad2_cgraph">
+<area shape="rect" title="считывает все строки из файла и сохраняет их в файл temp.bin в формате &quot;количество символов,..." alt="" coords="5,5,92,32"/>
+<area shape="rect" href="data_8c.html#a2e6f33c71b479e7aa9121b9289ad1765" title="возвращает размер файла" alt="" coords="140,5,215,32"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="ac72c4f0bcd3b7a1dd3163a869af9787f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac72c4f0bcd3b7a1dd3163a869af9787f">&#9670;&nbsp;</a></span>save_data()</h2>
+<a id="a49755497168590133ed1b4d3a068b710"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49755497168590133ed1b4d3a068b710">&#9670;&nbsp;</a></span>recreate_data()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void recreate_data </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structstrophe.html">strophe</a> *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>ptr_on_buff</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>num_of_lines</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>воссоздает массив строф по буферу </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>указатель на массив строф </td></tr>
+    <tr><td class="paramname">ptr_on_buff</td><td>указатель на буфер </td></tr>
+    <tr><td class="paramname">num_of_lines</td><td>количество строк </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>количество считанных строк </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="data_8c_a49755497168590133ed1b4d3a068b710_icgraph.png" border="0" usemap="#data_8c_a49755497168590133ed1b4d3a068b710_icgraph" alt=""/></div>
+<map name="data_8c_a49755497168590133ed1b4d3a068b710_icgraph" id="data_8c_a49755497168590133ed1b4d3a068b710_icgraph">
+<area shape="rect" title="воссоздает массив строф по буферу" alt="" coords="108,5,220,32"/>
+<area shape="rect" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Вызов разных функций" alt="" coords="5,5,60,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a8a41143675eebfba966cd17b6d476917"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a41143675eebfba966cd17b6d476917">&#9670;&nbsp;</a></span>save_data()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -391,7 +492,7 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="memname">void save_data </td>
           <td>(</td>
-          <td class="paramtype">char **&#160;</td>
+          <td class="paramtype">const struct <a class="el" href="structstrophe.html">strophe</a> *&#160;</td>
           <td class="paramname"><em>data</em>, </td>
         </tr>
         <tr>
@@ -417,8 +518,8 @@ Here is the call graph for this function:</div>
 <p>сохраняет все строки из массива указателей в файл </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">data</td><td>указатель на массив указателей </td></tr>
-    <tr><td class="paramname">count</td><td>количество строк </td></tr>
+    <tr><td class="paramname">data</td><td>указатель на массив строф </td></tr>
+    <tr><td class="paramname">count</td><td>количество </td></tr>
     <tr><td class="paramname">file</td><td>имя файла </td></tr>
   </table>
   </dd>
@@ -426,17 +527,17 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="data_8c_ac72c4f0bcd3b7a1dd3163a869af9787f_cgraph.png" border="0" usemap="#data_8c_ac72c4f0bcd3b7a1dd3163a869af9787f_cgraph" alt=""/></div>
-<map name="data_8c_ac72c4f0bcd3b7a1dd3163a869af9787f_cgraph" id="data_8c_ac72c4f0bcd3b7a1dd3163a869af9787f_cgraph">
+<div class="center"><img src="data_8c_a8a41143675eebfba966cd17b6d476917_cgraph.png" border="0" usemap="#data_8c_a8a41143675eebfba966cd17b6d476917_cgraph" alt=""/></div>
+<map name="data_8c_a8a41143675eebfba966cd17b6d476917_cgraph" id="data_8c_a8a41143675eebfba966cd17b6d476917_cgraph">
 <area shape="rect" title="сохраняет все строки из массива указателей в файл" alt="" coords="5,5,95,32"/>
-<area shape="rect" href="data_8c.html#a7fac2e4985e8d27ad1af1af8e2549592" title="сохраняет ровно одну строку в файл" alt="" coords="143,5,227,32"/>
+<area shape="rect" href="data_8c.html#a942440b8415de54dc812b2e20323ca4c" title="сохраняет ровно одну строку в файл" alt="" coords="143,5,227,32"/>
 </map>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="data_8c_ac72c4f0bcd3b7a1dd3163a869af9787f_icgraph.png" border="0" usemap="#data_8c_ac72c4f0bcd3b7a1dd3163a869af9787f_icgraph" alt=""/></div>
-<map name="data_8c_ac72c4f0bcd3b7a1dd3163a869af9787f_icgraph" id="data_8c_ac72c4f0bcd3b7a1dd3163a869af9787f_icgraph">
+<div class="center"><img src="data_8c_a8a41143675eebfba966cd17b6d476917_icgraph.png" border="0" usemap="#data_8c_a8a41143675eebfba966cd17b6d476917_icgraph" alt=""/></div>
+<map name="data_8c_a8a41143675eebfba966cd17b6d476917_icgraph" id="data_8c_a8a41143675eebfba966cd17b6d476917_icgraph">
 <area shape="rect" title="сохраняет все строки из массива указателей в файл" alt="" coords="108,5,197,32"/>
 <area shape="rect" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Вызов разных функций" alt="" coords="5,5,60,32"/>
 </map>
@@ -444,8 +545,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a7fac2e4985e8d27ad1af1af8e2549592"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7fac2e4985e8d27ad1af1af8e2549592">&#9670;&nbsp;</a></span>save_line()</h2>
+<a id="a942440b8415de54dc812b2e20323ca4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a942440b8415de54dc812b2e20323ca4c">&#9670;&nbsp;</a></span>save_line()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -453,7 +554,7 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">void save_line </td>
           <td>(</td>
-          <td class="paramtype">char *&#160;</td>
+          <td class="paramtype">const struct <a class="el" href="structstrophe.html">strophe</a> *&#160;</td>
           <td class="paramname"><em>line</em>, </td>
         </tr>
         <tr>
@@ -481,28 +582,13 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="data_8c_a7fac2e4985e8d27ad1af1af8e2549592_icgraph.png" border="0" usemap="#data_8c_a7fac2e4985e8d27ad1af1af8e2549592_icgraph" alt=""/></div>
-<map name="data_8c_a7fac2e4985e8d27ad1af1af8e2549592_icgraph" id="data_8c_a7fac2e4985e8d27ad1af1af8e2549592_icgraph">
+<div class="center"><img src="data_8c_a942440b8415de54dc812b2e20323ca4c_icgraph.png" border="0" usemap="#data_8c_a942440b8415de54dc812b2e20323ca4c_icgraph" alt=""/></div>
+<map name="data_8c_a942440b8415de54dc812b2e20323ca4c_icgraph" id="data_8c_a942440b8415de54dc812b2e20323ca4c_icgraph">
 <area shape="rect" title="сохраняет ровно одну строку в файл" alt="" coords="245,5,329,32"/>
-<area shape="rect" href="data_8c.html#ac72c4f0bcd3b7a1dd3163a869af9787f" title="сохраняет все строки из массива указателей в файл" alt="" coords="108,5,197,32"/>
+<area shape="rect" href="data_8c.html#a8a41143675eebfba966cd17b6d476917" title="сохраняет все строки из массива указателей в файл" alt="" coords="108,5,197,32"/>
 <area shape="rect" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Вызов разных функций" alt="" coords="5,5,60,32"/>
 </map>
 </div>
-
-</div>
-</div>
-<h2 class="groupheader">Variable Documentation</h2>
-<a id="a8096f9e1bfe40511cc401fb1faf86648"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8096f9e1bfe40511cc401fb1faf86648">&#9670;&nbsp;</a></span>max_possible_size</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const int max_possible_size = 300</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
 
 </div>
 </div>

@@ -1,0 +1,4 @@
+<map id="read_bin" name="read_bin">
+<area shape="rect" id="node1" title="считывает строки из файла .bin." alt="" coords="5,5,84,32"/>
+<area shape="rect" id="node2" href="$data_8c.html#a2e6f33c71b479e7aa9121b9289ad1765" title="возвращает размер файла" alt="" coords="132,5,207,32"/>
+</map>

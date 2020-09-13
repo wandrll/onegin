@@ -1,4 +1,0 @@
-<map id="get_line" name="get_line">
-<area shape="rect" id="node1" title="считывает одну строку из файла" alt="" coords="247,5,321,32"/>
-<area shape="rect" id="node2" href="$data_8c.html#acf3b4c91f1339bf83232943ff7e11907" title="считывает все строки из файла и сохраняет их в файл temp.bin в формате &quot;количество символов,..." alt="" coords="5,5,199,32"/>
-</map>

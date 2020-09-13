@@ -1,12 +1,22 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/** \brief считывает одну строку из файла
- *  \param line указатель на строку куда записать считанную строку
- *  \param fp указатель на файл
- *  \return количество элементов в строке
+/** \brief структура хранящая одну строфу 
+ *  \param line указатель на строку
+ *  \param count количество байтов выделенных на строку (русс. символы занимаю 2 байта)
  */
-int get_line(char* line, FILE* fp);
+struct strophe{
+    const char* line;
+    int count;
+};
+
+
+/** \brief выделение памяти для массива строф 
+ *  \param count количество 
+ */
+struct strophe* data_mem_alloc(int count);
+
+
 
 /** \brief находит количество переходов на новую строку
  *  \param file имя файла откуда считывать
@@ -14,44 +24,65 @@ int get_line(char* line, FILE* fp);
  */
 int lines_count(char* file);
 
+
 /** \brief считывает все строки из файла и сохраняет их в файл temp.bin в формате "количество символов, строка"
- *  \param data указатель на массив указателей
+ *  \param data указатель на массив строф
  *  \param file имя файла
- *  \param count количество переходов на новую строку в файле "file"
- *  \return количество не пустых строк в файле
+ *  \return указатель на буфер содержащий все данные 
  */
-int old_read_data(char** data, char* file, int count);
+char* read_data(struct strophe* data, char* file);
 
-int read_data_and_create_bin(char* file);
-
-/** \brief печатает все строки
- *  \param data указатель на массив указателей
- *  \param count количество строй
- */
-void print_data(char** data, int count);
 
 /** \brief сохраняет ровно одну строку в файл
  *  \param line указатель на строку
  *  \param fp указатель на файл
  */
-void save_line(char* line, FILE* fp);
+void save_line(const struct strophe* line, FILE* fp);
+
 
 /** \brief сохраняет все строки из массива указателей в файл
- *  \param data указатель на массив указателей
- *  \param count количество строк
+ *  \param data указатель на массив строф
+ *  \param count количество
  *  \param file имя файла
  */
-void save_data(char** data, int count, char* file);
+void save_data(const struct strophe* data, int count, char* file);
+
 
 /** \brief очищает память выделенную для data 
- *  \param data указатель на массив указателей
- *  \param lines_count количество ненулевых строк
+ *  \param data указатель на массив строф
+ *  \param buffer_for_strings указатель на начало буфера
  */
-void free_data();
+void free_data(struct strophe* data, char* buffer_for_strings);
 
-/** \brief считывает строки из файла temp.bin 
- *  \param data указатель на массив указателей
+
+/** \brief считывает строки из файла .bin 
+ *  \param data указатель на массив строф
+ *  \param count количество строк
+ *  \param bin_file имя бинарника
  *  \return количество считанных строк
  */
-int read_bin(char** data);
+char* read_bin(struct strophe* data, int count, char* bin_file);
+
+
+/** \brief сохраняет строфы в  .bin 
+ *  \param data указатель на массив строф
+ *  \param n количество строк
+ *  \param file имя бинарника
+ */
+void create_bin(const struct strophe* data, int n, char* file);
+
+
+/** \brief воссоздает массив строф по буферу
+ *  \param data указатель на массив строф
+ *  \param ptr_on_buff указатель на буфер
+ *  \param num_of_lines количество строк
+ *  \return количество считанных строк
+ */
+void recreate_data(struct strophe* data, const char* ptr_on_buff, int num_of_lines);
+
+
+/** \brief возвращает размер файла
+ *  \param file имя файла
+ *  \return количество байт в файле
+ */
 int file_size(char* file);

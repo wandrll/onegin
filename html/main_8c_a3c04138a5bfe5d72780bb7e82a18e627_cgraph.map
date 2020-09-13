@@ -1,12 +1,17 @@
 <map id="main" name="main">
-<area shape="rect" id="node1" title="Вызов разных функций" alt="" coords="5,132,60,159"/>
-<area shape="rect" id="node2" href="$sort_8h.html#a118507087619afc23b7666b4e28d5887" title="старая добрая сортировка пузырьком, но уже для любых типов" alt="" coords="136,5,235,32"/>
-<area shape="rect" id="node3" href="$data_8h.html#a0560e51933aa4447c28d1fea6f3dbbd0" title="очищает память выделенную для data." alt="" coords="143,56,227,83"/>
-<area shape="rect" id="node5" href="$data_8h.html#a4e03cfe06968f901a5ad0ff65c97c6ee" title="находит количество переходов на новую строку" alt="" coords="137,107,233,133"/>
-<area shape="rect" id="node6" href="$data_8h.html#ad4b49069d5f8b1fed989418160750943" title="считывает строки из файла temp.bin." alt="" coords="146,157,225,184"/>
-<area shape="rect" id="node7" href="$data_8h.html#ac72c4f0bcd3b7a1dd3163a869af9787f" title="сохраняет все строки из массива указателей в файл" alt="" coords="141,208,230,235"/>
-<area shape="rect" id="node9" href="$sort_8h.html#aa8325dd1c3cb1d64c35d606d6723115e" title="обертка для сравнения двух строк" alt="" coords="108,259,263,285"/>
-<area shape="rect" id="node4" href="$data_8c.html#a4e03cfe06968f901a5ad0ff65c97c6ee" title="находит количество переходов на новую строку" alt="" coords="324,56,420,83"/>
-<area shape="rect" id="node8" href="$data_8c.html#a7fac2e4985e8d27ad1af1af8e2549592" title="сохраняет ровно одну строку в файл" alt="" coords="330,208,414,235"/>
-<area shape="rect" id="node10" href="$sort_8c.html#a5e2de5241d956430cf502cca82452e2b" title="сравнение двух строк" alt="" coords="311,259,433,285"/>
+<area shape="rect" id="node1" title="Вызов разных функций" alt="" coords="5,208,60,235"/>
+<area shape="rect" id="node2" href="$data_8h.html#a0d9df2d498a6781b6f501b08298beef5" title="выделение памяти для массива строф" alt="" coords="126,5,257,32"/>
+<area shape="rect" id="node3" href="$data_8h.html#addf8102aa789e3a20b5e9950f5f2ceeb" title="очищает память выделенную для data." alt="" coords="149,56,233,83"/>
+<area shape="rect" id="node4" href="$data_8h.html#a4e03cfe06968f901a5ad0ff65c97c6ee" title="находит количество переходов на новую строку" alt="" coords="143,107,239,133"/>
+<area shape="rect" id="node5" href="$sort_8h.html#a4aa8f50173c24335345971677afeb561" title="сортировка слиянием" alt="" coords="143,157,239,184"/>
+<area shape="rect" id="node6" href="$data_8h.html#af2832b9dcf7ef001cc7c775d7ecf2b7b" title="считывает строки из файла .bin." alt="" coords="152,208,231,235"/>
+<area shape="rect" id="node8" href="$data_8h.html#a49755497168590133ed1b4d3a068b710" title="воссоздает массив строф по буферу" alt="" coords="135,259,247,285"/>
+<area shape="rect" id="node9" href="$data_8h.html#a8a41143675eebfba966cd17b6d476917" title="сохраняет все строки из массива указателей в файл" alt="" coords="147,309,236,336"/>
+<area shape="rect" id="node11" href="$sort_8h.html#aa17fb5495d33d4deab4043b2c486f2b6" title="обертка для сравнения двух строк" alt="" coords="108,361,275,402"/>
+<area shape="rect" id="node14" href="$sort_8h.html#abf00251fa4fbbcb3bd2d62d15acc0198" title="обертка для сравнения двух строк" alt="" coords="108,426,275,467"/>
+<area shape="rect" id="node7" href="$data_8c.html#a2e6f33c71b479e7aa9121b9289ad1765" title="возвращает размер файла" alt="" coords="379,208,453,235"/>
+<area shape="rect" id="node10" href="$data_8c.html#a942440b8415de54dc812b2e20323ca4c" title="сохраняет ровно одну строку в файл" alt="" coords="374,309,458,336"/>
+<area shape="rect" id="node12" href="$sort_8c.html#a806c04c4950e1da3edf25529781e7d4f" title="обратное двух строк" alt="" coords="323,375,509,401"/>
+<area shape="rect" id="node13" href="$sort_8c.html#a6ddeedd29f53186c0f18c13a44261d9d" title="some magic numbers для работы с русскими буквами.(я знаю что это просто ужасно, но по&#45;другому русские..." alt="" coords="557,404,644,431"/>
+<area shape="rect" id="node15" href="$sort_8c.html#aa18578838c9e72a6ddea6bbd221ae043" title="прямое сравнение строк" alt="" coords="326,429,506,456"/>
 </map>

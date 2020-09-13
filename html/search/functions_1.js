@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['clean_5fstring_28',['clean_string',['../sort_8h.html#aab1d54c5985c3f155449a82d2468eebb',1,'clean_string(char *line):&#160;sort.c'],['../sort_8c.html#aab1d54c5985c3f155449a82d2468eebb',1,'clean_string(char *line):&#160;sort.c']]]
+  ['create_5fbin_34',['create_bin',['../data_8h.html#a4727392d18454a4700338d0a51b958c6',1,'create_bin(const struct strophe *data, int n, char *file):&#160;data.c'],['../data_8c.html#a4727392d18454a4700338d0a51b958c6',1,'create_bin(const struct strophe *data, int n, char *file):&#160;data.c']]]
 ];
