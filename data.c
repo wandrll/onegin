@@ -2,38 +2,26 @@
 #include <stdlib.h>
 #include <assert.h>
 #include <string.h>
+#include <sys/stat.h>
 #include "data.h"
 /** \file */
 
-
-size_t lines_count(char* file){
-    assert(file != NULL);
-    int c = 0;
-    size_t n = file_size(file);
+size_t count_of_symbol(const char* buf, char c){
     size_t count = 0;
-    FILE* fp = fopen(file, "r");
-
-    assert(fp != NULL);
-    for(size_t i = 0; i < n; i++){
-        c = getc(fp);
-        if(c == '\n'){
-            count++;
-        }
+    while(*buf != 0){
+        buf = strchr(buf, c);
+        count++;
+        buf++;
     }
-    fclose(fp);
     return count;
 }
 
 
-size_t file_size(char* file){
+size_t file_size(const char* file){
     assert(file != NULL);
-    FILE* fb = fopen(file, "rb");
-    assert(fb != NULL);
-
-    fseek(fb, 0, SEEK_END);
-    size_t size = ftell(fb);
-    fclose(fb);
-    return size;
+    struct stat st;
+    stat(file, &st);
+    return st.st_size;
 }
 
 
@@ -44,41 +32,48 @@ struct strophe* data_mem_alloc(size_t count){
 }
 
 
-char* read_data(struct strophe* data, char* file){
-    assert(data != NULL);
+char* read_raw_data(const char* file, size_t* lines_count){
     assert(file != NULL);
-    
-
     FILE* fb = fopen(file, "rb");
     assert(fb != NULL);
    
     size_t fsize = file_size(file);
-    char* buffer_for_strings = (char*)calloc(fsize + 1, sizeof(char));
+    char* buffer_for_strings = (char*)calloc(fsize + 2, sizeof(char));
     buffer_for_strings[0] = 0;
     fread(buffer_for_strings + 1, sizeof(char), fsize, fb);
 
-    char* to = buffer_for_strings + 1;
-    int curr_count = 0;
-    int curr_line = 0;
-    
-    for(size_t i = 1; i < fsize + 1; i++){
-        if(buffer_for_strings[i] == '\n'){
-            buffer_for_strings[i] = '\0';            
-            data[curr_line].count = curr_count;
-            data[curr_line].line = to;
-            curr_count = 0;
-            curr_line++;
-            to = buffer_for_strings + i + 1;
-        }else{
-            curr_count++;            
-        }
-    }
-    
+    *lines_count = count_of_symbol(buffer_for_strings + 1, '\n');
     fclose(fb);
     return buffer_for_strings;
 }
 
-void create_bin(const struct strophe* data, size_t n, char* file){
+
+struct strophe* data_adaptation(char* buffer, size_t count){
+    assert(buffer != NULL);
+
+    struct strophe* data = data_mem_alloc(count);
+    assert(data != NULL);
+
+    char* first_ptr = buffer + 1;
+    char* second_ptr = first_ptr;
+    int curr_line = 0;
+
+    for(int i = 0; i < count; i++){
+        first_ptr = strchr(first_ptr, '\n');
+        *first_ptr = '\0';            
+        data[i].count = first_ptr - second_ptr ;
+        data[i].line = second_ptr;
+        first_ptr++;
+        second_ptr = first_ptr;       
+    }
+
+    return data;
+}
+
+
+
+
+void create_bin(const struct strophe* data, size_t n, const char* file){
     assert(data != NULL);
 
     FILE* fp = fopen(file, "wb");
@@ -93,12 +88,12 @@ void create_bin(const struct strophe* data, size_t n, char* file){
 
 
 
-char* read_bin(struct strophe* data, size_t count, char* bin_file){
+char* read_bin(struct strophe* data, size_t count, const char* bin_file){
     assert(data != NULL);
     FILE* fb = fopen(bin_file, "rb");
     assert(fb != NULL);
     int fsize = file_size(bin_file);
-    char* buffer_for_strings = (char*)calloc(fsize, sizeof(char));
+    char* buffer_for_strings = (char*)calloc(fsize + 2, sizeof(char));
     
     fread(buffer_for_strings, sizeof(char), fsize, fb);
 
@@ -108,10 +103,8 @@ char* read_bin(struct strophe* data, size_t count, char* bin_file){
 
     for(size_t i = 1; i < fsize; i++){
         if(buffer_for_strings[i] == '\0'){
-            //printf("%d ",i);
             data[curr_line].count = curr_count;
             data[curr_line].line = to;
-           // data[curr_line].original_pos = curr_line;
             curr_count = 0;
             curr_line++;
             to = buffer_for_strings + i + 1;
@@ -137,7 +130,7 @@ void save_line(const struct strophe* line, FILE* fp){
 }
 
 
-void save_data(const struct strophe* data, size_t count, char* file){
+void save_data(const struct strophe* data, size_t count, const char* file){
     assert(data != NULL);
     assert(file != NULL);
     FILE* fp = fopen(file, "a");
@@ -165,6 +158,7 @@ void recreate_data(struct strophe* data, const char* ptr_on_buff, size_t num_of_
     int currl = 0;
     const char* curr = ptr_on_buff + 1;
     const char* to = ptr_on_buff + 1;
+
     while(currl < num_of_lines){
         if(*curr == '\0'){
             data[currl].line = to;

@@ -21,19 +21,15 @@ struct strophe* data_mem_alloc(size_t count);
 
 
 
-/** \brief находит количество переходов на новую строку
- *  \param file имя файла откуда считывать
- *  \return количество переходов на новую строку в файле
- */
-size_t lines_count(char* file);
 
 
-/** \brief считывает все строки из файла и сохраняет их в файл bin
- *  \param data указатель на массив строф
+
+/** \brief считывает все строки из файла и сохраняет их в буфер
+ *  \param lines_count сюда запишется количество строк
  *  \param file имя файла
  *  \return указатель на буфер содержащий все данные 
  */
-char* read_data(struct strophe* data, char* file);
+char* read_raw_data(const char* file, size_t* lines_count);
 
 
 /** \brief сохраняет ровно одну строку в файл
@@ -48,7 +44,7 @@ void save_line(const struct strophe* line, FILE* fp);
  *  \param count количество
  *  \param file имя файла
  */
-void save_data(const struct strophe* data, size_t count, char* file);
+void save_data(const struct strophe* data, size_t count, const char* file);
 
 
 /** \brief очищает память выделенную для data 
@@ -64,7 +60,7 @@ void free_data(struct strophe* data, char* buffer_for_strings);
  *  \param bin_file имя бинарника
  *  \return количество считанных строк
  */
-char* read_bin(struct strophe* data, size_t count, char* bin_file);
+char* read_bin(struct strophe* data, size_t count, const char* bin_file);
 
 
 /** \brief сохраняет строфы в  .bin 
@@ -72,7 +68,7 @@ char* read_bin(struct strophe* data, size_t count, char* bin_file);
  *  \param n количество строк
  *  \param file имя бинарника
  */
-void create_bin(const struct strophe* data, size_t n, char* file);
+void create_bin(const struct strophe* data, size_t n, const char* file);
 
 
 /** \brief воссоздает массив строф по буферу
@@ -88,4 +84,20 @@ void recreate_data(struct strophe* data, const char* ptr_on_buff, size_t num_of_
  *  \param file имя файла
  *  \return количество байт в файле
  */
-size_t file_size(char* file);
+size_t file_size(const char* file);
+
+
+/** \brief создает массив структур и заменяет \n на \0
+ *  \param buffer буфер с данными
+ *  \param count количество строк
+ *  \return количество байт в файле
+ */
+struct strophe* data_adaptation(char* buffer, size_t count);
+
+/** \brief находит количество символов c в строке buf
+ *  \param buf строка в которой искать
+ *  \param c символ который искать
+ * \return количество символов
+ */
+
+size_t count_of_symbol(const char* buf, char c);

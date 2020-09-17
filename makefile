@@ -1,4 +1,4 @@
-CFLAGS=-c -O2
+CFLAGS= -c
 CTEMP=-Wall -Werror -Wextra -pedantic -Wshadow -Wconversion -Wsign-conversion
 all: onegin
  

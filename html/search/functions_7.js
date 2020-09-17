@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['read_5fbin_57',['read_bin',['../data_8h.html#a601261227713b964235ae72fb13cb510',1,'read_bin(struct strophe *data, size_t count, char *bin_file):&#160;data.c'],['../data_8c.html#a601261227713b964235ae72fb13cb510',1,'read_bin(struct strophe *data, size_t count, char *bin_file):&#160;data.c']]],
-  ['read_5fdata_58',['read_data',['../data_8h.html#a59afb16e078f710f93bd78d1fd736ad2',1,'read_data(struct strophe *data, char *file):&#160;data.c'],['../data_8c.html#a59afb16e078f710f93bd78d1fd736ad2',1,'read_data(struct strophe *data, char *file):&#160;data.c']]],
-  ['recreate_5fdata_59',['recreate_data',['../data_8h.html#a14313f0087ccf1acd5fd9d75b4652a1d',1,'recreate_data(struct strophe *data, const char *ptr_on_buff, size_t num_of_lines):&#160;data.c'],['../data_8c.html#a14313f0087ccf1acd5fd9d75b4652a1d',1,'recreate_data(struct strophe *data, const char *ptr_on_buff, size_t num_of_lines):&#160;data.c']]]
+  ['unit_5ftest_5fread_5fand_5fwrite_66',['unit_test_read_and_write',['../unit_8c.html#a568e7ef36eacfdc3c8fadffd80a2b204',1,'unit_test_read_and_write(char *from, char *to):&#160;unit.c'],['../unit_8h.html#a568e7ef36eacfdc3c8fadffd80a2b204',1,'unit_test_read_and_write(char *from, char *to):&#160;unit.c']]]
 ];

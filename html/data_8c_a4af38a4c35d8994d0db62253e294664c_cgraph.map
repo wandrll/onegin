@@ -1,0 +1,4 @@
+<map id="save_data" name="save_data">
+<area shape="rect" id="node1" title="сохраняет все строки из массива указателей в файл" alt="" coords="5,5,95,32"/>
+<area shape="rect" id="node2" href="$data_8c.html#a942440b8415de54dc812b2e20323ca4c" title="сохраняет ровно одну строку в файл" alt="" coords="143,5,227,32"/>
+</map>

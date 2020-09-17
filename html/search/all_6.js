@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['main_13',['main',['../main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;main.c'],['../test_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;test.c']]],
-  ['main_2ec_14',['main.c',['../main_8c.html',1,'']]],
-  ['merge_5fsort_15',['merge_sort',['../sort_8h.html#a321e13f44a96a815f78e9a0333249915',1,'merge_sort(void *data, size_t count, int(*comp)(const void *, const void *), size_t size):&#160;sort.c'],['../sort_8c.html#a321e13f44a96a815f78e9a0333249915',1,'merge_sort(void *data, size_t count, int(*comp)(const void *, const void *), size_t size):&#160;sort.c']]]
+  ['read_5fbin_15',['read_bin',['../data_8c.html#af8c1aaf551ebebc4f434aa53055be2e9',1,'read_bin(struct strophe *data, size_t count, const char *bin_file):&#160;data.c'],['../data_8h.html#af8c1aaf551ebebc4f434aa53055be2e9',1,'read_bin(struct strophe *data, size_t count, const char *bin_file):&#160;data.c']]],
+  ['read_5fraw_5fdata_16',['read_raw_data',['../data_8c.html#a3dc56bddd17bf340ba000dead72e75c1',1,'read_raw_data(const char *file, size_t *lines_count):&#160;data.c'],['../data_8h.html#a3dc56bddd17bf340ba000dead72e75c1',1,'read_raw_data(const char *file, size_t *lines_count):&#160;data.c']]],
+  ['recreate_5fdata_17',['recreate_data',['../data_8c.html#a14313f0087ccf1acd5fd9d75b4652a1d',1,'recreate_data(struct strophe *data, const char *ptr_on_buff, size_t num_of_lines):&#160;data.c'],['../data_8h.html#a14313f0087ccf1acd5fd9d75b4652a1d',1,'recreate_data(struct strophe *data, const char *ptr_on_buff, size_t num_of_lines):&#160;data.c']]]
 ];

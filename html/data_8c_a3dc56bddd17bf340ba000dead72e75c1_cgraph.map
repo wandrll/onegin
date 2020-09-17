@@ -1,0 +1,5 @@
+<map id="read_raw_data" name="read_raw_data">
+<area shape="rect" id="node1" title="считывает все строки из файла и сохраняет их в буфер" alt="" coords="5,31,124,57"/>
+<area shape="rect" id="node2" href="$data_8c.html#ae5fc604e0ea38025b3f2af9b7e39308d" title="находит количество символов c в строке buf." alt="" coords="172,5,305,32"/>
+<area shape="rect" id="node3" href="$data_8c.html#a0278f4b12c66580ce2ca08b1490f7026" title="возвращает размер файла" alt="" coords="201,56,276,83"/>
+</map>

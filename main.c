@@ -15,25 +15,26 @@
 #include "data.h"
 #include "sort.h"
 
-/** \brief Вызов разных функций 
+/** \brief Основная программа
+ 
  */
-
 int main(int argc, char** argv){
     setlocale(LC_ALL, "CP1251");
     assert(argc >= 3);
-    size_t num_of_lines = lines_count(argv[1]);   
+    size_t num_of_lines = 0;  
     char* from = argv[1];
     char* to = argv[2];
     remove(to);
 
-    struct strophe* data = data_mem_alloc(num_of_lines);
-    char* ptr_on_buff = read_data(data, from);
-    //create_bin(data, num_of_lines, argv[3]);
-    //char* ptr_on_buff = read_bin(data, num_of_lines, argv[3]);
+
+    char* ptr_on_buff = read_raw_data(from, &num_of_lines);
+
+    struct strophe* data = data_adaptation(ptr_on_buff, num_of_lines);
+    
     merge_sort(data, num_of_lines, sort_strophe_compare_straight_RUS, sizeof(data[0]));
     save_data(data,num_of_lines, to);
     
-    merge_sort(data, num_of_lines, sort_strophe_compare_reversed_RUS, sizeof(data[0]));
+    qsort(data, num_of_lines, sizeof(data[0]), sort_strophe_compare_reversed_RUS);
     save_data(data,num_of_lines, to);
 
     recreate_data(data, ptr_on_buff, num_of_lines);
