@@ -6,14 +6,15 @@
 /** \file */
 
 
-int lines_count(char* file){
+size_t lines_count(char* file){
     assert(file != NULL);
-    char c = 0;
-    int count = 0;
+    int c = 0;
+    size_t n = file_size(file);
+    size_t count = 0;
     FILE* fp = fopen(file, "r");
 
     assert(fp != NULL);
-    while(c != EOF){
+    for(size_t i = 0; i < n; i++){
         c = getc(fp);
         if(c == '\n'){
             count++;
@@ -24,19 +25,19 @@ int lines_count(char* file){
 }
 
 
-int file_size(char* file){
+size_t file_size(char* file){
     assert(file != NULL);
     FILE* fb = fopen(file, "rb");
     assert(fb != NULL);
 
     fseek(fb, 0, SEEK_END);
-    int size = ftell(fb);
+    size_t size = ftell(fb);
     fclose(fb);
     return size;
 }
 
 
-struct strophe* data_mem_alloc(int count){
+struct strophe* data_mem_alloc(size_t count){
     struct strophe* data = (struct strophe*)calloc(count, sizeof(struct strophe));
 
     return data;
@@ -60,12 +61,11 @@ char* read_data(struct strophe* data, char* file){
     int curr_count = 0;
     int curr_line = 0;
     
-    for(int i = 1; i < fsize + 1; i++){
+    for(size_t i = 1; i < fsize + 1; i++){
         if(buffer_for_strings[i] == '\n'){
             buffer_for_strings[i] = '\0';            
             data[curr_line].count = curr_count;
             data[curr_line].line = to;
-        //    data[curr_line].original_pos = curr_line;
             curr_count = 0;
             curr_line++;
             to = buffer_for_strings + i + 1;
@@ -78,12 +78,12 @@ char* read_data(struct strophe* data, char* file){
     return buffer_for_strings;
 }
 
-void create_bin(const struct strophe* data, int n, char* file){
+void create_bin(const struct strophe* data, size_t n, char* file){
     assert(data != NULL);
 
     FILE* fp = fopen(file, "wb");
     putc('\0', fp);
-    for(int i = 0; i < n; i++){
+    for(size_t i = 0; i < n; i++){
         fwrite(data[i].line, sizeof(char), data[i].count, fp);
         putc('\0', fp);
     }
@@ -93,7 +93,7 @@ void create_bin(const struct strophe* data, int n, char* file){
 
 
 
-char* read_bin(struct strophe* data, int count, char* bin_file){
+char* read_bin(struct strophe* data, size_t count, char* bin_file){
     assert(data != NULL);
     FILE* fb = fopen(bin_file, "rb");
     assert(fb != NULL);
@@ -106,7 +106,7 @@ char* read_bin(struct strophe* data, int count, char* bin_file){
     int curr_count = 0;
     int curr_line = 0;
 
-    for(int i = 1; i < fsize; i++){
+    for(size_t i = 1; i < fsize; i++){
         if(buffer_for_strings[i] == '\0'){
             //printf("%d ",i);
             data[curr_line].count = curr_count;
@@ -137,7 +137,7 @@ void save_line(const struct strophe* line, FILE* fp){
 }
 
 
-void save_data(const struct strophe* data, int count, char* file){
+void save_data(const struct strophe* data, size_t count, char* file){
     assert(data != NULL);
     assert(file != NULL);
     FILE* fp = fopen(file, "a");
@@ -146,8 +146,8 @@ void save_data(const struct strophe* data, int count, char* file){
     for(int i = 0; i < count; i++){
         save_line(&data[i], fp);
     }
-    char* end = "\n------------\n\n"; // 15 символов
-    fwrite(end, sizeof(char), 15, fp);
+    char* end = "################################################################################\n"; // 81 символов
+    fwrite(end, sizeof(char), 81, fp);
     fclose(fp);
 }
 
@@ -158,7 +158,7 @@ void free_data(struct strophe* data, char* buffer_for_strings){
     free(data);
 }
 
-void recreate_data(struct strophe* data, const char* ptr_on_buff, int num_of_lines){
+void recreate_data(struct strophe* data, const char* ptr_on_buff, size_t num_of_lines){
     assert(data != NULL);
     assert(ptr_on_buff != NULL);
 

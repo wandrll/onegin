@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['main_39',['main',['../main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main.c']]],
-  ['merge_5fsort_40',['merge_sort',['../sort_8h.html#a4aa8f50173c24335345971677afeb561',1,'merge_sort(void *data, int count, int(*comp)(const void *, const void *), size_t size):&#160;sort.c'],['../sort_8c.html#a4aa8f50173c24335345971677afeb561',1,'merge_sort(void *data, int count, int(*comp)(const void *, const void *), size_t size):&#160;sort.c']]]
+  ['lines_5fcount_54',['lines_count',['../data_8h.html#ad47d1bbffd9f78ac70e67b10cec73dd0',1,'lines_count(char *file):&#160;data.c'],['../data_8c.html#ad47d1bbffd9f78ac70e67b10cec73dd0',1,'lines_count(char *file):&#160;data.c']]]
 ];

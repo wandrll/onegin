@@ -1,8 +1,0 @@
-<map id="normalize" name="normalize">
-<area shape="rect" id="node1" title="some magic numbers для работы с русскими буквами.(я знаю что это просто ужасно, но по&#45;другому русские..." alt="" coords="557,46,644,73"/>
-<area shape="rect" id="node2" href="$sort_8c.html#a806c04c4950e1da3edf25529781e7d4f" title="обратное двух строк" alt="" coords="323,17,509,43"/>
-<area shape="rect" id="node5" href="$sort_8c.html#aa18578838c9e72a6ddea6bbd221ae043" title="прямое сравнение строк" alt="" coords="326,71,506,98"/>
-<area shape="rect" id="node3" href="$sort_8c.html#aa17fb5495d33d4deab4043b2c486f2b6" title="обертка для сравнения двух строк" alt="" coords="108,5,275,47"/>
-<area shape="rect" id="node4" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Вызов разных функций" alt="" coords="5,46,60,73"/>
-<area shape="rect" id="node6" href="$sort_8c.html#abf00251fa4fbbcb3bd2d62d15acc0198" title="обертка для сравнения двух строк" alt="" coords="108,71,275,112"/>
-</map>

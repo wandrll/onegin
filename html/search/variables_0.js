@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['count_51',['count',['../structstrophe.html#a281661e616a508a91a57ab4bd5613e93',1,'strophe']]]
+  ['count_71',['count',['../structstrophe.html#a96d28f6dc03db131bbbfa84d00d9c229',1,'strophe']]]
 ];

@@ -1,5 +1,0 @@
-<map id="sort_strophe_compare_straight" name="sort_strophe_compare_straight">
-<area shape="rect" id="node1" title="обертка для сравнения двух строк" alt="" coords="5,5,172,47"/>
-<area shape="rect" id="node2" href="$sort_8c.html#aa18578838c9e72a6ddea6bbd221ae043" title="прямое сравнение строк" alt="" coords="220,13,400,39"/>
-<area shape="rect" id="node3" href="$sort_8c.html#a6ddeedd29f53186c0f18c13a44261d9d" title="some magic numbers для работы с русскими буквами.(я знаю что это просто ужасно, но по&#45;другому русские..." alt="" coords="448,13,535,39"/>
-</map>

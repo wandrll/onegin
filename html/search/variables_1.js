@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['line_52',['line',['../structstrophe.html#a34dd0e2a6338420e4bef405b6c8fd255',1,'strophe']]]
+  ['line_72',['line',['../structstrophe.html#a3752075f2d4caed9ce674b2aa06dfce8',1,'strophe']]]
 ];

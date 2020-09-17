@@ -21,29 +21,59 @@ void bubble_sort(void* data, int start, int end,  int(*comp)(const void*, const 
   
     \return число > или < 0, в зависимости от результата сравнения
  */
-int string_compare_straight(const char* a, const char* b);
+int string_compare_straight_RUS(const unsigned char* a, const unsigned char* b);
 
 
 /** \brief - обертка для сравнения двух строк 
   
     \return число > или < 0, в зависимости от результата сравнения
  */
-int sort_strophe_compare_straight(const void* string1,const void* string2);
+int sort_strophe_compare_straight_RUS(const void* string1,const void* string2);
 
 
 /** \brief - обратное двух строк 
   
     \return число > или < 0, в зависимости от результата сравнения
  */
-int string_compare_reversed(const char* a, int len1, const char* b, int len2);
+int string_compare_reversed_RUS(const unsigned char* a, int len1, const unsigned char* b, int len2);
 
 
 /** \brief - обертка для сравнения двух строк 
   
     \return число > или < 0, в зависимости от результата сравнения
  */
-int sort_strophe_compare_reversed(const void* string1, const void* string2);
+int sort_strophe_compare_reversed_RUS(const void* string1, const void* string2);
 
+
+
+
+
+/** \brief - прямое сравнение строк
+  
+    \return число > или < 0, в зависимости от результата сравнения
+ */
+int string_compare_straight_ENG(const unsigned char* a, const unsigned char* b);
+
+
+/** \brief - обертка для сравнения двух строк 
+  
+    \return число > или < 0, в зависимости от результата сравнения
+ */
+int sort_strophe_compare_straight_ENG(const void* string1,const void* string2);
+
+
+/** \brief - обратное двух строк 
+  
+    \return число > или < 0, в зависимости от результата сравнения
+ */
+int string_compare_reversed_ENG(const unsigned char* a, int len1, const unsigned char* b, int len2);
+
+
+/** \brief - обертка для сравнения двух строк 
+  
+    \return число > или < 0, в зависимости от результата сравнения
+ */
+int sort_strophe_compare_reversed_ENG(const void* string1, const void* string2);
 
 /** \brief - сортировка слиянием
     \param data - указатель на начало массива который нужно сортировать
@@ -51,4 +81,4 @@ int sort_strophe_compare_reversed(const void* string1, const void* string2);
     \param comp - функция сравнения двух элементов
     \param size - размер одного элемента
  */
-void merge_sort(void* data, int count, int(*comp)(const void*, const void*), size_t size);
+void merge_sort(void* data, size_t count, int(*comp)(const void*, const void*), size_t size);

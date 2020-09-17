@@ -1,4 +1,4 @@
 <map id="read_data" name="read_data">
-<area shape="rect" id="node1" title="считывает все строки из файла и сохраняет их в файл temp.bin в формате &quot;количество символов,..." alt="" coords="5,5,92,32"/>
-<area shape="rect" id="node2" href="$data_8c.html#a2e6f33c71b479e7aa9121b9289ad1765" title="возвращает размер файла" alt="" coords="140,5,215,32"/>
+<area shape="rect" id="node1" title="считывает все строки из файла и сохраняет их в файл bin." alt="" coords="5,5,92,32"/>
+<area shape="rect" id="node2" href="$data_8c.html#a0fd9e315057bc6fd4546bb5af282c51a" title="возвращает размер файла" alt="" coords="140,5,215,32"/>
 </map>

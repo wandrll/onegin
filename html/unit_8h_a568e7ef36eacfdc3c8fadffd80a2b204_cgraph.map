@@ -1,0 +1,10 @@
+<map id="unit_test_read_and_write" name="unit_test_read_and_write">
+<area shape="rect" id="node1" title="Тестирование считывания из одного файла и сохранение в другой файл" alt="" coords="5,99,152,141"/>
+<area shape="rect" id="node2" href="$data_8h.html#af672c82df5bb966ee140984ca4f6c9a0" title="выделение памяти для массива строф" alt="" coords="200,5,331,32"/>
+<area shape="rect" id="node3" href="$data_8h.html#addf8102aa789e3a20b5e9950f5f2ceeb" title="очищает память выделенную для data." alt="" coords="223,56,307,83"/>
+<area shape="rect" id="node4" href="$data_8h.html#ad47d1bbffd9f78ac70e67b10cec73dd0" title="находит количество переходов на новую строку" alt="" coords="217,107,313,133"/>
+<area shape="rect" id="node6" href="$data_8h.html#a59afb16e078f710f93bd78d1fd736ad2" title="считывает все строки из файла и сохраняет их в файл bin." alt="" coords="222,157,309,184"/>
+<area shape="rect" id="node7" href="$data_8h.html#a82ca85f71313c3c2bf4333a64345d81e" title="сохраняет все строки из массива указателей в файл" alt="" coords="221,208,310,235"/>
+<area shape="rect" id="node5" href="$data_8c.html#a0fd9e315057bc6fd4546bb5af282c51a" title="возвращает размер файла" alt="" coords="383,132,458,159"/>
+<area shape="rect" id="node8" href="$data_8c.html#a942440b8415de54dc812b2e20323ca4c" title="сохраняет ровно одну строку в файл" alt="" coords="379,208,463,235"/>
+</map>

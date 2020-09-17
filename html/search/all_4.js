@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['line_8',['line',['../structstrophe.html#a34dd0e2a6338420e4bef405b6c8fd255',1,'strophe']]],
-  ['lines_5fcount_9',['lines_count',['../data_8h.html#a4e03cfe06968f901a5ad0ff65c97c6ee',1,'lines_count(char *file):&#160;data.c'],['../data_8c.html#a4e03cfe06968f901a5ad0ff65c97c6ee',1,'lines_count(char *file):&#160;data.c']]]
+  ['isletter_5feng_9',['isletter_ENG',['../sort_8c.html#adb68bdbd325ede3bea8e9914e5c45104',1,'sort.c']]],
+  ['isletter_5frus_10',['isletter_RUS',['../sort_8c.html#a286552355fde53c1833acc352549a1b5',1,'sort.c']]]
 ];

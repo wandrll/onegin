@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['data_5fmem_5falloc_35',['data_mem_alloc',['../data_8h.html#a0d9df2d498a6781b6f501b08298beef5',1,'data_mem_alloc(int count):&#160;data.c'],['../data_8c.html#a0d9df2d498a6781b6f501b08298beef5',1,'data_mem_alloc(int count):&#160;data.c']]]
+  ['data_5fmem_5falloc_49',['data_mem_alloc',['../data_8h.html#af672c82df5bb966ee140984ca4f6c9a0',1,'data_mem_alloc(size_t count):&#160;data.c'],['../data_8c.html#af672c82df5bb966ee140984ca4f6c9a0',1,'data_mem_alloc(size_t count):&#160;data.c']]]
 ];
