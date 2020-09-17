@@ -15,7 +15,7 @@
 
 
 int isletter_RUS(const unsigned char c){
-    if(c >= 192){
+    if(c >= 192){ //В кодировке CP1251 русские буквы начинаются с 192 и идут до 255
         return 1;
     }else{
         return 0;

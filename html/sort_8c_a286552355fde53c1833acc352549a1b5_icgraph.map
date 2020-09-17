@@ -1,0 +1,10 @@
+<map id="isletter_RUS" name="isletter_RUS">
+<area shape="rect" id="node1" title=" " alt="" coords="751,46,853,73"/>
+<area shape="rect" id="node2" href="$sort_8h.html#a235fb8cd50e0e475936e09660927df57" title="обратное двух строк" alt="" coords="481,17,703,43"/>
+<area shape="rect" id="node7" href="$sort_8h.html#a6b3022a8438f4b40efd06653cb74856e" title="прямое сравнение строк" alt="" coords="485,71,699,98"/>
+<area shape="rect" id="node3" href="$sort_8h.html#a5a3a96ee9832731b1af4d08b614bf75f" title="обертка для сравнения двух строк" alt="" coords="267,5,433,47"/>
+<area shape="rect" id="node4" href="$unit_8h.html#a3d0dd231a42849a4badad75aa8079802" title="Комплексное тестирование всех функций" alt="" coords="108,17,219,43"/>
+<area shape="rect" id="node6" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Основная программа" alt="" coords="136,71,191,98"/>
+<area shape="rect" id="node5" href="$test_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Вызов тестирующих функций" alt="" coords="5,17,60,43"/>
+<area shape="rect" id="node8" href="$sort_8h.html#a234d574079307973408e6e356c586875" title="обертка для сравнения двух строк" alt="" coords="267,71,433,112"/>
+</map>
