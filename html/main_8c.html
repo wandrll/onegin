@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -45,6 +49,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('main_8c.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,7 +80,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#func-members">Функции</a>  </div>
@@ -70,7 +90,6 @@ $(function() {
 <div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
 <code>#include &lt;assert.h&gt;</code><br />
 <code>#include &lt;stdlib.h&gt;</code><br />
-<code>#include &lt;locale.h&gt;</code><br />
 <code>#include &quot;<a class="el" href="data_8h_source.html">data.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="sort_8h_source.html">sort.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
@@ -78,13 +97,12 @@ $(function() {
 <div class="dyncontent">
 <div class="center"><img src="main_8c__incl.png" border="0" usemap="#main_8c" alt=""/></div>
 <map name="main_8c" id="main_8c">
-<area shape="rect" title=" " alt="" coords="166,5,232,32"/>
-<area shape="rect" title=" " alt="" coords="287,155,354,181"/>
+<area shape="rect" title=" " alt="" coords="118,5,185,32"/>
+<area shape="rect" title=" " alt="" coords="118,155,185,181"/>
 <area shape="rect" title=" " alt="" coords="23,80,98,107"/>
-<area shape="rect" title=" " alt="" coords="34,155,105,181"/>
-<area shape="rect" title=" " alt="" coords="209,80,282,107"/>
-<area shape="rect" href="data_8h.html" title=" " alt="" coords="122,80,185,107"/>
-<area shape="rect" href="sort_8h.html" title=" " alt="" coords="358,80,416,107"/>
+<area shape="rect" title=" " alt="" coords="240,155,311,181"/>
+<area shape="rect" href="data_8h.html" title=" " alt="" coords="205,80,268,107"/>
+<area shape="rect" href="sort_8h.html" title=" " alt="" coords="122,80,181,107"/>
 </map>
 </div>
 </div><table class="memberdecls">
@@ -122,17 +140,24 @@ $(function() {
 </div><div class="memdoc">
 
 <p>Основная программа </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">argc</td><td>количество введеных аргументов командной строки </td></tr>
+    <tr><td class="paramname">argv</td><td>названия файлов откуда брать данные и куда записывать результат. Если ничего не ввести программа работать не будет!!!!!!!!!!!!!!! </td></tr>
+  </table>
+  </dd>
+</dl>
 <div class="fragment"><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;                               {</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    setlocale(LC_ALL, <span class="stringliteral">&quot;CP1251&quot;</span>);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    assert(argc &gt;= 3);</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">size_t</span> num_of_lines = 0;  </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">char</span>* from = argv[1];</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">char</span>* to = argv[2];</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    remove(to);</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">size_t</span> num_of_lines = 0;  </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">char</span>* from = argv[1];</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">char</span>* to = argv[2];</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    remove(to);</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">char</span>* ptr_on_buff = <a class="code" href="data_8c.html#a3dc56bddd17bf340ba000dead72e75c1">read_raw_data</a>(from, &amp;num_of_lines);</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">char</span>* ptr_on_buff = <a class="code" href="data_8c.html#a3dc56bddd17bf340ba000dead72e75c1">read_raw_data</a>(from, &amp;num_of_lines);</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keyword">struct </span><a class="code" href="structstrophe.html">strophe</a>* data = <a class="code" href="data_8c.html#ae0f1cf4ddb5330e01df11ad49af25129">data_adaptation</a>(ptr_on_buff, num_of_lines);</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    </div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="sort_8c.html#a321e13f44a96a815f78e9a0333249915">merge_sort</a>(data, num_of_lines, <a class="code" href="sort_8c.html#a234d574079307973408e6e356c586875">sort_strophe_compare_straight_RUS</a>, <span class="keyword">sizeof</span>(data[0]));</div>
@@ -142,15 +167,12 @@ $(function() {
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="data_8c.html#a4af38a4c35d8994d0db62253e294664c">save_data</a>(data,num_of_lines, to);</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="data_8c.html#a14313f0087ccf1acd5fd9d75b4652a1d">recreate_data</a>(data, ptr_on_buff, num_of_lines);</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="data_8c.html#a4af38a4c35d8994d0db62253e294664c">save_data</a>(data,num_of_lines, to);</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="data_8c.html#a4af38a4c35d8994d0db62253e294664c">save_data</a>(data,num_of_lines, to);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <a class="code" href="data_8c.html#addf8102aa789e3a20b5e9950f5f2ceeb">free_data</a>(data, ptr_on_buff);</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <a class="code" href="data_8c.html#addf8102aa789e3a20b5e9950f5f2ceeb">free_data</a>(data, ptr_on_buff);</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;}</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;}</div>
 </div><!-- fragment -->
 <p class="reference">Перекрестные ссылки <a class="el" href="data_8c.html#ae0f1cf4ddb5330e01df11ad49af25129">data_adaptation()</a>, <a class="el" href="data_8c.html#addf8102aa789e3a20b5e9950f5f2ceeb">free_data()</a>, <a class="el" href="sort_8c.html#a321e13f44a96a815f78e9a0333249915">merge_sort()</a>, <a class="el" href="data_8c.html#a3dc56bddd17bf340ba000dead72e75c1">read_raw_data()</a>, <a class="el" href="data_8c.html#a14313f0087ccf1acd5fd9d75b4652a1d">recreate_data()</a>, <a class="el" href="data_8c.html#a4af38a4c35d8994d0db62253e294664c">save_data()</a>, <a class="el" href="sort_8c.html#a5a3a96ee9832731b1af4d08b614bf75f">sort_strophe_compare_reversed_RUS()</a> и <a class="el" href="sort_8c.html#a234d574079307973408e6e356c586875">sort_strophe_compare_straight_RUS()</a>.</p>
 <div class="dynheader">
@@ -180,20 +202,24 @@ $(function() {
 </div>
 </div>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <div class="ttc" id="astructstrophe_html"><div class="ttname"><a href="structstrophe.html">strophe</a></div><div class="ttdoc">структура хранящая одну строфу</div><div class="ttdef"><b>Definition:</b> data.h:11</div></div>
 <div class="ttc" id="adata_8c_html_addf8102aa789e3a20b5e9950f5f2ceeb"><div class="ttname"><a href="data_8c.html#addf8102aa789e3a20b5e9950f5f2ceeb">free_data</a></div><div class="ttdeci">void free_data(struct strophe *data, char *buffer_for_strings)</div><div class="ttdoc">очищает память выделенную для data.</div><div class="ttdef"><b>Definition:</b> data.c:147</div></div>
 <div class="ttc" id="adata_8c_html_a14313f0087ccf1acd5fd9d75b4652a1d"><div class="ttname"><a href="data_8c.html#a14313f0087ccf1acd5fd9d75b4652a1d">recreate_data</a></div><div class="ttdeci">void recreate_data(struct strophe *data, const char *ptr_on_buff, size_t num_of_lines)</div><div class="ttdoc">воссоздает массив строф по буферу</div><div class="ttdef"><b>Definition:</b> data.c:154</div></div>
 <div class="ttc" id="asort_8c_html_a5a3a96ee9832731b1af4d08b614bf75f"><div class="ttname"><a href="sort_8c.html#a5a3a96ee9832731b1af4d08b614bf75f">sort_strophe_compare_reversed_RUS</a></div><div class="ttdeci">int sort_strophe_compare_reversed_RUS(const void *string1, const void *string2)</div><div class="ttdoc">обертка для сравнения двух строк</div><div class="ttdef"><b>Definition:</b> sort.c:99</div></div>
 <div class="ttc" id="adata_8c_html_a4af38a4c35d8994d0db62253e294664c"><div class="ttname"><a href="data_8c.html#a4af38a4c35d8994d0db62253e294664c">save_data</a></div><div class="ttdeci">void save_data(const struct strophe *data, size_t count, const char *file)</div><div class="ttdoc">сохраняет все строки из массива указателей в файл</div><div class="ttdef"><b>Definition:</b> data.c:133</div></div>
 <div class="ttc" id="asort_8c_html_a234d574079307973408e6e356c586875"><div class="ttname"><a href="sort_8c.html#a234d574079307973408e6e356c586875">sort_strophe_compare_straight_RUS</a></div><div class="ttdeci">int sort_strophe_compare_straight_RUS(const void *string1, const void *string2)</div><div class="ttdoc">обертка для сравнения двух строк</div><div class="ttdef"><b>Definition:</b> sort.c:57</div></div>
-<div class="ttc" id="asort_8c_html_a321e13f44a96a815f78e9a0333249915"><div class="ttname"><a href="sort_8c.html#a321e13f44a96a815f78e9a0333249915">merge_sort</a></div><div class="ttdeci">void merge_sort(void *data, size_t count, int(*comp)(const void *, const void *), size_t size)</div><div class="ttdoc">сортировка слиянием</div><div class="ttdef"><b>Definition:</b> sort.c:235</div></div>
+<div class="ttc" id="asort_8c_html_a321e13f44a96a815f78e9a0333249915"><div class="ttname"><a href="sort_8c.html#a321e13f44a96a815f78e9a0333249915">merge_sort</a></div><div class="ttdeci">void merge_sort(void *data, size_t count, int(*comp)(const void *, const void *), size_t size)</div><div class="ttdoc">сортировка слиянием</div><div class="ttdef"><b>Definition:</b> sort.c:230</div></div>
 <div class="ttc" id="adata_8c_html_a3dc56bddd17bf340ba000dead72e75c1"><div class="ttname"><a href="data_8c.html#a3dc56bddd17bf340ba000dead72e75c1">read_raw_data</a></div><div class="ttdeci">char * read_raw_data(const char *file, size_t *lines_count)</div><div class="ttdoc">считывает все строки из файла и сохраняет их в буфер</div><div class="ttdef"><b>Definition:</b> data.c:35</div></div>
 <div class="ttc" id="adata_8c_html_ae0f1cf4ddb5330e01df11ad49af25129"><div class="ttname"><a href="data_8c.html#ae0f1cf4ddb5330e01df11ad49af25129">data_adaptation</a></div><div class="ttdeci">struct strophe * data_adaptation(char *buffer, size_t count)</div><div class="ttdoc">создает массив структур и заменяет   на \0.</div><div class="ttdef"><b>Definition:</b> data.c:51</div></div>
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Создано системой &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.17
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="main_8c.html">main.c</a></li>
+    <li class="footer">Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
 </body>
 </html>

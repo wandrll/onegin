@@ -1,9 +1,8 @@
 <map id="main.c" name="main.c">
-<area shape="rect" id="node1" title=" " alt="" coords="166,5,232,32"/>
-<area shape="rect" id="node2" title=" " alt="" coords="287,155,354,181"/>
+<area shape="rect" id="node1" title=" " alt="" coords="118,5,185,32"/>
+<area shape="rect" id="node2" title=" " alt="" coords="118,155,185,181"/>
 <area shape="rect" id="node3" title=" " alt="" coords="23,80,98,107"/>
-<area shape="rect" id="node4" title=" " alt="" coords="34,155,105,181"/>
-<area shape="rect" id="node5" title=" " alt="" coords="209,80,282,107"/>
-<area shape="rect" id="node6" href="$data_8h.html" title=" " alt="" coords="122,80,185,107"/>
-<area shape="rect" id="node7" href="$sort_8h.html" title=" " alt="" coords="358,80,416,107"/>
+<area shape="rect" id="node4" title=" " alt="" coords="240,155,311,181"/>
+<area shape="rect" id="node5" href="$data_8h.html" title=" " alt="" coords="205,80,268,107"/>
+<area shape="rect" id="node6" href="$sort_8h.html" title=" " alt="" coords="122,80,181,107"/>
 </map>
