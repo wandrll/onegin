@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <locale.h>
 #include "unit.h"
 /** \file */
 
@@ -10,11 +9,10 @@
  */
 
 int main(){
-    setlocale(LC_ALL, "CP1251");
     
     //----------------------------------------------------------------------
     int count1 = 4;
-
+ 
     char from1[] = "unit_tests_read_and_write/1.txt";
     char to1[] = "unit_tests_read_and_write/1r.txt";
    

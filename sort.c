@@ -205,11 +205,6 @@ int sort_strophe_compare_reversed_ENG(const void* string1, const  void* string2)
 //----------------------------------------------------------------------
 //----------------------------------------------------------------------
 //----------------------------------------------------------------------
-
-
-
-
-
 //----------------------------------------------------------------------
 
 
@@ -236,6 +231,7 @@ void merge_sort(void* data, size_t count, int(*comp)(const void*, const void*), 
     if(count > 1){
         size_t count1 = count / 2;
         size_t count2 = count / 2 + count % 2;
+
         merge_sort(data, count1, comp, size);
         merge_sort(((char*)data + count1*size), count2, comp, size);
         
@@ -243,6 +239,7 @@ void merge_sort(void* data, size_t count, int(*comp)(const void*, const void*), 
         size_t currf = 0;
         size_t currs = count1;
         size_t c = 0;
+        
         while(currf < count1 && currs < count){
             if(comp((char*)data + currf*size, (char*)data + currs*size) < 0){
                 memcpy((char*)b + c*size, (char*)data + currf*size, size);

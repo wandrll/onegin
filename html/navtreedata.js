@@ -23,7 +23,7 @@ for the JavaScript code in this file
 var NAVTREE =
 [
   [ "Сортировка Онегина", "index.html", [
-    [ "Интересный и оригинальный заголовок.", "index.html", null ],
+    [ "Заголовок.", "index.html", null ],
     [ "Классы", "annotated.html", [
       [ "Классы", "annotated.html", "annotated_dup" ],
       [ "Алфавитный указатель классов", "classes.html", null ],

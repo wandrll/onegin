@@ -39,11 +39,12 @@ char* read_raw_data(const char* file, size_t* lines_count){
    
     size_t fsize = file_size(file);
     char* buffer_for_strings = (char*)calloc(fsize + 2, sizeof(char));
-    buffer_for_strings[0] = 0;
     fread(buffer_for_strings + 1, sizeof(char), fsize, fb);
 
     *lines_count = count_of_symbol(buffer_for_strings + 1, '\n');
+    
     fclose(fb);
+    
     return buffer_for_strings;
 }
 
