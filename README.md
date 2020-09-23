@@ -18,9 +18,9 @@ make unittest
 ## Как что-то запустить чтобы что-то получилось
 
 ```bash
-./onegin formated_data.txt result
+./onegin formated_data.txt result.txt
 ```
-Запуск основной программы, formated_data.txt - файл откуда брать данные
+Запуск основной программы, formated_data.txt - файл откуда брать данные, result.txt - куда записать результат
 ```bash
 ./unittest
 ```
