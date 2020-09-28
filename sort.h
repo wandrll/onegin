@@ -28,7 +28,7 @@ int string_compare_straight_RUS(const unsigned char* a, const unsigned char* b);
   
     \return число > или < 0, в зависимости от результата сравнения
  */
-int sort_strophe_compare_straight_RUS(const void* string1,const void* string2);
+int sort_line_compare_straight_RUS(const void* string1,const void* string2);
 
 
 /** \brief - обратное двух строк 
@@ -42,7 +42,7 @@ int string_compare_reversed_RUS(const unsigned char* a, int len1, const unsigned
   
     \return число > или < 0, в зависимости от результата сравнения
  */
-int sort_strophe_compare_reversed_RUS(const void* string1, const void* string2);
+int sort_line_compare_reversed_RUS(const void* string1, const void* string2);
 
 
 
@@ -59,7 +59,7 @@ int string_compare_straight_ENG(const unsigned char* a, const unsigned char* b);
   
     \return число > или < 0, в зависимости от результата сравнения
  */
-int sort_strophe_compare_straight_ENG(const void* string1,const void* string2);
+int sort_line_compare_straight_ENG(const void* string1,const void* string2);
 
 
 /** \brief - обратное двух строк 
@@ -73,7 +73,7 @@ int string_compare_reversed_ENG(const unsigned char* a, int len1, const unsigned
   
     \return число > или < 0, в зависимости от результата сравнения
  */
-int sort_strophe_compare_reversed_ENG(const void* string1, const void* string2);
+int sort_line_compare_reversed_ENG(const void* string1, const void* string2);
 
 /** \brief - сортировка слиянием
     \param data - указатель на начало массива который нужно сортировать
@@ -82,3 +82,6 @@ int sort_strophe_compare_reversed_ENG(const void* string1, const void* string2);
     \param size - размер одного элемента
  */
 void merge_sort(void* data, size_t count, int(*comp)(const void*, const void*), size_t size);
+
+
+void do_merge_sort(void* data, size_t count, int(*comp)(const void*, const void*), size_t size, void* b);

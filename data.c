@@ -19,14 +19,14 @@ size_t count_of_symbol(const char* buf, char c){
 
 size_t file_size(const char* file){
     assert(file != NULL);
-    struct stat st;
+    struct stat st = {};
     stat(file, &st);
     return st.st_size;
 }
 
 
-struct strophe* data_mem_alloc(size_t count){
-    struct strophe* data = (struct strophe*)calloc(count, sizeof(struct strophe));
+struct line* data_mem_alloc(size_t count){
+    struct line* data = (struct line*)calloc(count, sizeof(struct line));
 
     return data;
 }
@@ -49,10 +49,10 @@ char* read_raw_data(const char* file, size_t* lines_count){
 }
 
 
-struct strophe* data_adaptation(char* buffer, size_t count){
+struct line* parse_buffer(char* buffer, size_t count){
     assert(buffer != NULL);
 
-    struct strophe* data = data_mem_alloc(count);
+    struct line* data = data_mem_alloc(count);
     assert(data != NULL);
 
     char* first_ptr = buffer + 1;
@@ -74,7 +74,7 @@ struct strophe* data_adaptation(char* buffer, size_t count){
 
 
 
-void create_bin(const struct strophe* data, size_t n, const char* file){
+void create_bin(const struct line* data, size_t n, const char* file){
     assert(data != NULL);
 
     FILE* fp = fopen(file, "wb");
@@ -89,7 +89,7 @@ void create_bin(const struct strophe* data, size_t n, const char* file){
 
 
 
-char* read_bin(struct strophe* data, size_t count, const char* bin_file){
+char* read_bin(struct line* data, size_t count, const char* bin_file){
     assert(data != NULL);
     FILE* fb = fopen(bin_file, "rb");
     assert(fb != NULL);
@@ -121,7 +121,7 @@ char* read_bin(struct strophe* data, size_t count, const char* bin_file){
 
 
 
-void save_line(const struct strophe* line, FILE* fp){
+void save_line(const struct line* line, FILE* fp){
     assert(line != NULL);
     assert(fp != NULL);
     
@@ -131,7 +131,7 @@ void save_line(const struct strophe* line, FILE* fp){
 }
 
 
-void save_data(const struct strophe* data, size_t count, const char* file){
+void save_data(const struct line* data, size_t count, const char* file){
     assert(data != NULL);
     assert(file != NULL);
     FILE* fp = fopen(file, "a");
@@ -140,19 +140,19 @@ void save_data(const struct strophe* data, size_t count, const char* file){
     for(int i = 0; i < count; i++){
         save_line(&data[i], fp);
     }
-    char* end = "################################################################################\n"; // 81 символов
-    fwrite(end, sizeof(char), 81, fp);
+    const char end[] = "################################################################################\n"; // 81 символов
+    fwrite(end, sizeof(char),sizeof(end)-1 , fp);
     fclose(fp);
 }
 
-void free_data(struct strophe* data, char* buffer_for_strings){
+void free_data(struct line* data, char* buffer_for_strings){
     assert(data != NULL);
     assert(buffer_for_strings != NULL);
     free(buffer_for_strings);
     free(data);
 }
 
-void recreate_data(struct strophe* data, const char* ptr_on_buff, size_t num_of_lines){
+void recreate_data(struct line* data, const char* ptr_on_buff, size_t num_of_lines){
     assert(data != NULL);
     assert(ptr_on_buff != NULL);
 

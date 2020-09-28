@@ -8,7 +8,7 @@
  *  \param line указатель на строку
  *  \param count количество байтов выделенных на строку
  */
-struct strophe{
+struct line{
     const unsigned char* line;
     size_t count;
 };
@@ -17,7 +17,7 @@ struct strophe{
 /** \brief выделение памяти для массива строф 
  *  \param count количество 
  */
-struct strophe* data_mem_alloc(size_t count);
+struct line* data_mem_alloc(size_t count);
 
 
 
@@ -36,7 +36,7 @@ char* read_raw_data(const char* file, size_t* lines_count);
  *  \param line указатель на строку
  *  \param fp указатель на файл
  */
-void save_line(const struct strophe* line, FILE* fp);
+void save_line(const struct line* line, FILE* fp);
 
 
 /** \brief сохраняет все строки из массива указателей в файл
@@ -44,23 +44,23 @@ void save_line(const struct strophe* line, FILE* fp);
  *  \param count количество
  *  \param file имя файла
  */
-void save_data(const struct strophe* data, size_t count, const char* file);
+void save_data(const struct line* data, size_t count, const char* file);
 
 
 /** \brief очищает память выделенную для data 
  *  \param data указатель на массив строф
  *  \param buffer_for_strings указатель на начало буфера
  */
-void free_data(struct strophe* data, char* buffer_for_strings);
+void free_data(struct line* data, char* buffer_for_strings);
 
 
 /** \brief считывает строки из файла .bin 
  *  \param data указатель на массив строф
  *  \param count количество строк
  *  \param bin_file имя бинарника
- *  \return количество считанных строк
+ *  \return указатель ну буфер
  */
-char* read_bin(struct strophe* data, size_t count, const char* bin_file);
+char* read_bin(struct line* data, size_t count, const char* bin_file);
 
 
 /** \brief сохраняет строфы в  .bin 
@@ -68,7 +68,7 @@ char* read_bin(struct strophe* data, size_t count, const char* bin_file);
  *  \param n количество строк
  *  \param file имя бинарника
  */
-void create_bin(const struct strophe* data, size_t n, const char* file);
+void create_bin(const struct line* data, size_t n, const char* file);
 
 
 /** \brief воссоздает массив строф по буферу
@@ -77,7 +77,7 @@ void create_bin(const struct strophe* data, size_t n, const char* file);
  *  \param num_of_lines количество строк
  *  \return количество считанных строк
  */
-void recreate_data(struct strophe* data, const char* ptr_on_buff, size_t num_of_lines);
+void recreate_data(struct line* data, const char* ptr_on_buff, size_t num_of_lines);
 
 
 /** \brief возвращает размер файла
@@ -90,9 +90,9 @@ size_t file_size(const char* file);
 /** \brief создает массив структур и заменяет \n на \0
  *  \param buffer буфер с данными
  *  \param count количество строк
- *  \return количество байт в файле
+ *  \return указатель на массив структур
  */
-struct strophe* data_adaptation(char* buffer, size_t count);
+struct line* parse_buffer(char* buffer, size_t count);
 
 /** \brief находит количество символов c в строке buf
  *  \param buf строка в которой искать

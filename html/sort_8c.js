@@ -1,6 +1,7 @@
 var sort_8c =
 [
     [ "bubble_sort", "sort_8c.html#a5e5db871f4c6ee13230e00184e5ffa97", null ],
+    [ "do_merge_sort", "sort_8c.html#ab8871c39322c6ed4b9c4a5958d3c4621", null ],
     [ "isletter_ENG", "sort_8c.html#adb68bdbd325ede3bea8e9914e5c45104", null ],
     [ "isletter_RUS", "sort_8c.html#a286552355fde53c1833acc352549a1b5", null ],
     [ "merge_sort", "sort_8c.html#a321e13f44a96a815f78e9a0333249915", null ],

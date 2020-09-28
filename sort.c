@@ -15,11 +15,7 @@
 
 
 int isletter_RUS(const unsigned char c){
-    if(c >= 192){ //В кодировке CP1251 русские буквы начинаются с 192 и идут до 255
-        return 1;
-    }else{
-        return 0;
-    }
+    return c >= 192; /** \warning Использование возможно если и только если изначальный файл был в кодировке 1251  */
 }
 
 
@@ -54,11 +50,11 @@ int string_compare_straight_RUS(const unsigned char* line1, const unsigned char*
 }
 
 
-int sort_strophe_compare_straight_RUS(const void* string1, const void* string2){
+int sort_line_compare_straight_RUS(const void* string1, const void* string2){
     assert(string1 != NULL);
     assert(string2 != NULL);
     assert(string1 != string2);
-    return string_compare_straight_RUS(((struct strophe*)string1)->line, ((struct strophe*)string2)->line);   
+    return string_compare_straight_RUS(((struct line*)string1)->line, ((struct line*)string2)->line);   
 }
 
 
@@ -96,12 +92,12 @@ int string_compare_reversed_RUS(const unsigned char* line1, int len1, const unsi
     return *line1 - *line2;    
 }
 
-int sort_strophe_compare_reversed_RUS(const void* string1, const  void* string2){
+int sort_line_compare_reversed_RUS(const void* string1, const  void* string2){
     assert(string1 != NULL);
     assert(string2 != NULL);
     assert(string1 != string2);
-    return string_compare_reversed_RUS(((struct strophe*)string1)->line, ((struct strophe*)string1)->count,
-                                   ((struct strophe*)string2)->line, ((struct strophe*)string2)->count);   
+    return string_compare_reversed_RUS(((struct line*)string1)->line, ((struct line*)string1)->count,
+                                   ((struct line*)string2)->line, ((struct line*)string2)->count);   
 }
 
 
@@ -151,11 +147,11 @@ int string_compare_straight_ENG(const unsigned char* line1, const unsigned char*
 }
 
 
-int sort_strophe_compare_straight_ENG(const void* string1, const void* string2){
+int sort_line_compare_straight_ENG(const void* string1, const void* string2){
     assert(string1 != NULL);
     assert(string2 != NULL);
     assert(string1 != string2);
-    return string_compare_straight_ENG(((struct strophe*)string1)->line, ((struct strophe*)string2)->line);   
+    return string_compare_straight_ENG(((struct line*)string1)->line, ((struct line*)string2)->line);   
 }
 
 
@@ -193,12 +189,12 @@ int string_compare_reversed_ENG(const unsigned char* line1, int len1, const unsi
     return *line1 - *line2;    
 }
 
-int sort_strophe_compare_reversed_ENG(const void* string1, const  void* string2){
+int sort_line_compare_reversed_ENG(const void* string1, const  void* string2){
     assert(string1 != NULL);
     assert(string2 != NULL);
     assert(string1 != string2);
-    return string_compare_reversed_ENG(((struct strophe*)string1)->line, ((struct strophe*)string1)->count,
-                                   ((struct strophe*)string2)->line, ((struct strophe*)string2)->count);   
+    return string_compare_reversed_ENG(((struct line*)string1)->line, ((struct line*)string1)->count,
+                                   ((struct line*)string2)->line, ((struct line*)string2)->count);   
 }
 
 
@@ -228,6 +224,12 @@ void bubble_sort(void* data, int start, int end, int(*comp)(const void*, const v
 }
 
 void merge_sort(void* data, size_t count, int(*comp)(const void*, const void*), size_t size){
+    void* b = (void *)calloc(count, size);
+    do_merge_sort(data, count, comp, size, b);
+    free(b);
+}
+
+void do_merge_sort(void* data, size_t count, int(*comp)(const void*, const void*), size_t size, void* b){
     if(count > 1){
         size_t count1 = count / 2;
         size_t count2 = count / 2 + count % 2;
@@ -235,11 +237,11 @@ void merge_sort(void* data, size_t count, int(*comp)(const void*, const void*), 
         merge_sort(data, count1, comp, size);
         merge_sort(((char*)data + count1*size), count2, comp, size);
         
-        void* b = (void *)calloc(count, size);
+        
         size_t currf = 0;
         size_t currs = count1;
         size_t c = 0;
-        
+
         while(currf < count1 && currs < count){
             if(comp((char*)data + currf*size, (char*)data + currs*size) < 0){
                 memcpy((char*)b + c*size, (char*)data + currf*size, size);
@@ -263,6 +265,5 @@ void merge_sort(void* data, size_t count, int(*comp)(const void*, const void*), 
             c++;        
         }
         memcpy(data, b, count*size);        
-        free(b);
     }
 }
